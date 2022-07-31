@@ -1,65 +1,157 @@
-
-
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700,500,600");
-
 
 :root {
   --black-3: 
+rgba(0, 0, 0, 0.251);
+  --black-32: 
 rgba(0, 0, 0, 0.298);
   --black-2: 
 rgba(0, 0, 0, 0.502);
   --black: 
 rgba(0, 0, 0, 1);
+  --science-blue-2: 
+rgba(0, 99, 229, 0.149);
   --blue-whale: 
 rgba(6, 38, 78, 1);
+  --science-blue: 
+rgba(9, 100, 216, 1);
   --eerie-black: 
 rgba(23, 23, 23, 1);
   --green-blue: 
 rgba(23, 104, 172, 1);
+  --forest-green: 
+rgba(37, 193, 34, 1);
+  --slimy-green: 
+rgba(38, 193, 35, 1);
+  --tuatara: 
+rgba(53, 53, 53, 1);
+  --chicago: 
+rgba(92, 92, 92, 1);
   --lima: 
 rgba(96, 197, 29, 1);
   --dove-gray-2: 
 rgba(104, 107, 111, 0.102);
+  --dove-gray-3: 
+rgba(104, 107, 111, 0.2);
   --dove-gray: 
 rgba(104, 107, 111, 1);
+  --bright-green: 
+rgba(108, 239, 21, 0.102);
+  --sonic-silver: 
+rgba(115, 115, 115, 1);
+  --sonic-silver2: 
+rgba(119, 119, 119, 1);
   --gray: 
 rgba(126, 126, 126, 1);
+  --stack: 
+rgba(140, 140, 140, 1);
+  --star-dust: 
+rgba(160, 159, 159, 1);
+  --quick-silver: 
+rgba(166, 166, 166, 1);
+  --pink-swan: 
+rgba(184, 184, 184, 1);
+  --pink-swan-2: 
+rgba(185, 185, 185, 1);
   --mist-gray: 
 rgba(196, 196, 196, 1);
+  --thunderbird: 
+rgba(197, 28, 28, 0.2);
+  --thunderbird-2: 
+rgba(197, 28, 28, 1);
+  --botticelli-2: 
+rgba(204, 225, 238, 1);
   --botticelli: 
 rgba(204, 226, 238, 1);
   --ebb: 
 rgba(227, 227, 227, 1);
+  --fuel-yellow: 
+rgba(232, 170, 36, 0.102);
+  --gallery: 
+rgba(239, 239, 239, 1);
   --alice-blue: 
 rgba(239, 247, 252, 1);
   --feta: 
 rgba(241, 254, 232, 1);
+  --flamingo: 
+rgba(252, 85, 47, 0.102);
   --white: 
 rgba(255, 255, 255, 1);
 
-  --font-size-xs: 13px;
-  --font-size-xl: 18px;
+  --font-size-xs: 12px;
   --font-size-s2: 14px;
   --font-size-m2: 16px;
   --font-size-l2: 20px;
+  --font-size-xs2: 13px;
+  --font-size-xl3: 18px;
   --font-size-xl2: 24px;
   --font-size-xxl2: 30px;
 
   --font-family-poppins: "Poppins";
+  --font-family-poppins-extralight: "Poppins-ExtraLight";
+  --font-family-work_sans: "Work Sans";
+  --font-family-work_sans-bold: "Work Sans-Bold";
 }
 
 
 
-.poppins-normal-black-14px {
+.poppins-medium-pink-swan-14px {
+  color: var(--pink-swan);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s2);
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-medium-gray-16px {
+  color: var(--gray);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-semi-bold-black-20px-2 {
+  color: var(--black-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l2);
+  font-weight: 600;
+  font-style: normal;
+}
+.border-0-8px-mist-gray {
+  border-width: 0.8px;
+  border-style: solid;
+  border-color: var(--mist-gray);
+}
+.poppins-normal-black-14px3 {
   color: var(--black);
   font-family: var(--font-family-poppins);
   font-size: var(--font-size-s2);
   font-weight: 400;
   font-style: normal;
 }
+.poppins-medium-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl2);
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-semi-bold-sonic-silver-20px {
+  color: var(--sonic-silver2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l2);
+  font-weight: 600;
+  font-style: normal;
+}
 .poppins-medium-white-16px {
   font-family: var(--font-family-poppins);
   font-size: var(--font-size-m2);
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-medium-black-11px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: 11px;
   font-weight: 500;
   font-style: normal;
 }
@@ -77,6 +169,41 @@ rgba(255, 255, 255, 1);
   font-weight: 400;
   font-style: normal;
 }
+.poppins-medium-quick-silver-16px {
+  color: var(--quick-silver);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-medium-thunderbird-55-4px {
+  color: var(--thunderbird-2);
+  font-family: var(--font-family-poppins);
+  font-size: 55.425235748291016px;
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-extra-light-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl2);
+  font-weight: 200;
+  font-style: normal;
+}
+.poppins-semi-bold-science-blue-12px {
+  color: var(--science-blue);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  font-style: normal;
+}
+.poppins-normal-pink-swan-16px {
+  color: var(--pink-swan-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
+  font-weight: 400;
+  font-style: normal;
+}
 .poppins-normal-green-blue-14px {
   color: var(--green-blue);
   font-family: var(--font-family-poppins);
@@ -84,17 +211,24 @@ rgba(255, 255, 255, 1);
   font-weight: 400;
   font-style: normal;
 }
+.poppins-medium-black-13px-22 {
+  color: var(--black-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs2);
+  font-weight: 500;
+  font-style: normal;
+}
 .poppins-bold-black-13px {
   color: var(--black);
   font-family: var(--font-family-poppins);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-xs2);
   font-weight: 700;
   font-style: normal;
 }
 .poppins-medium-black-18px {
   color: var(--black);
   font-family: var(--font-family-poppins);
-  font-size: var(--font-size-xl);
+  font-size: 18px;
   font-weight: 500;
   font-style: normal;
 }
@@ -112,6 +246,27 @@ rgba(255, 255, 255, 1);
   font-weight: 500;
   font-style: normal;
 }
+.worksans-bold-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-work_sans-bold);
+  font-size: var(--font-size-l2);
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-normal-gray-16px {
+  color: var(--gray);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-normal-black-13px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs2);
+  font-weight: 400;
+  font-style: normal;
+}
 .poppins-medium-black-14px-22 {
   color: var(--black);
   font-family: var(--font-family-poppins);
@@ -119,10 +274,15 @@ rgba(255, 255, 255, 1);
   font-weight: 500;
   font-style: normal;
 }
+.border-1px-dove-gray-3 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--dove-gray-3);
+}
 .poppins-medium-black-13px {
   color: var(--black);
   font-family: var(--font-family-poppins);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-xs2);
   font-weight: 500;
   font-style: normal;
 }
@@ -131,6 +291,20 @@ rgba(255, 255, 255, 1);
   font-family: var(--font-family-poppins);
   font-size: var(--font-size-xxl2);
   font-weight: 500;
+  font-style: normal;
+}
+.poppins-bold-blue-whale-11px {
+  color: var(--blue-whale);
+  font-family: var(--font-family-poppins);
+  font-size: 11px;
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-semi-bold-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-l2);
+  font-weight: 600;
   font-style: normal;
 }
 .poppins-normal-eerie-black-14px {
@@ -152,6 +326,13 @@ rgba(255, 255, 255, 1);
   font-weight: 500;
   font-style: normal;
 }
+.poppins-medium-black-36px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+}
 .poppins-semi-bold-black-16px {
   color: var(--black);
   font-family: var(--font-family-poppins);
@@ -164,6 +345,20 @@ rgba(255, 255, 255, 1);
   border-style: solid;
   border-color: var(--mist-gray);
 }
+.poppins-semi-bold-sonic-silver-16px {
+  color: var(--sonic-silver);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
+  font-weight: 600;
+  font-style: normal;
+}
+.worksans-bold-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-work_sans);
+  font-size: var(--font-size-l2);
+  font-weight: 700;
+  font-style: normal;
+}
 .poppins-medium-lima-55-4px {
   color: var(--lima);
   font-family: var(--font-family-poppins);
@@ -171,10 +366,22 @@ rgba(255, 255, 255, 1);
   font-weight: 500;
   font-style: normal;
 }
-.poppins-medium-black-18px-2 {
+.poppins-medium-black-13px-2 {
   color: var(--black-3);
   font-family: var(--font-family-poppins);
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-xs2);
+  font-weight: 500;
+  font-style: normal;
+}
+.border-0-5px-star-dust {
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: var(--star-dust);
+}
+.poppins-medium-black-18px-2 {
+  color: var(--black-32);
+  font-family: var(--font-family-poppins);
+  font-size: 18px;
   font-weight: 500;
   font-style: normal;
 }
@@ -185,10 +392,17 @@ rgba(255, 255, 255, 1);
   font-weight: 400;
   font-style: normal;
 }
+.poppins-medium-stack-11px {
+  color: var(--stack);
+  font-family: var(--font-family-poppins);
+  font-size: 11px;
+  font-weight: 500;
+  font-style: normal;
+}
 .poppins-normal-eerie-black-12px {
   color: var(--eerie-black);
   font-family: var(--font-family-poppins);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 400;
   font-style: normal;
 }
@@ -196,6 +410,13 @@ rgba(255, 255, 255, 1);
   color: var(--black-2);
   font-family: var(--font-family-poppins);
   font-size: var(--font-size-s2);
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-medium-chicago-16px {
+  color: var(--chicago);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
   font-weight: 500;
   font-style: normal;
 }
@@ -228,6 +449,13 @@ rgba(255, 255, 255, 1);
   border-style: solid;
   border-color: var(--black);
 }
+.poppins-medium-forest-green-16px {
+  color: var(--forest-green);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
+  font-weight: 500;
+  font-style: normal;
+}
 .border-0-5px-botticelli {
   border-width: 0.5px;
   border-style: solid;
@@ -245,6 +473,20 @@ rgba(255, 255, 255, 1);
   border-style: solid;
   border-color: var(--dove-gray-2);
 }
+.poppins-semi-bold-green-blue-24px {
+  color: var(--green-blue);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl2);
+  font-weight: 600;
+  font-style: normal;
+}
+.poppins-normal-tuatara-14px {
+  color: var(--tuatara);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s2);
+  font-weight: 400;
+  font-style: normal;
+}
 .poppins-normal-green-blue-16px {
   color: var(--green-blue);
   font-family: var(--font-family-poppins);
@@ -252,8 +494,36 @@ rgba(255, 255, 255, 1);
   font-weight: 400;
   font-style: normal;
 }
+.poppins-bold-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl2);
+  font-weight: 700;
+  font-style: normal;
+}
+.poppins-medium-green-blue-16px {
+  color: var(--green-blue);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
+  font-weight: 500;
+  font-style: normal;
+}
+.poppins-normal-black-12px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-extra-light-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-poppins-extralight);
+  font-size: var(--font-size-xl2);
+  font-weight: 200;
+  font-style: normal;
+}
 
-.resume-bank {
+.resume-bank-1 {
   align-items: flex-start;
   background-color: var(--white);
   display: flex;
@@ -1276,7 +1546,7 @@ rgba(255, 255, 255, 1);
   min-width: 24px;
 }
 
-.resume-bank-1 {
+.resume-bank {
   align-items: center;
   align-self: stretch;
   background-color: var(--white);
