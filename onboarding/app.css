@@ -1,0 +1,591 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700,500,600,200|Work+Sans:700");
+
+:root {
+    --black-3: 
+  rgba(0, 0, 0, 0.298);
+    --black-2: 
+  rgba(0, 0, 0, 0.502);
+    --black: 
+  rgba(0, 0, 0, 1);
+    --blue-whale: 
+  rgba(6, 38, 78, 1);
+    --eerie-black: 
+  rgba(23, 23, 23, 1);
+    --green-blue: 
+  rgba(23, 104, 172, 1);
+    --lima: 
+  rgba(96, 197, 29, 1);
+    --dove-gray-2: 
+  rgba(104, 107, 111, 0.102);
+    --dove-gray: 
+  rgba(104, 107, 111, 1);
+    --sonic-silver: 
+  rgba(119, 119, 119, 1);
+    --gray: 
+  rgba(126, 126, 126, 1);
+    --mist-gray: 
+  rgba(196, 196, 196, 1);
+    --botticelli: 
+  rgba(204, 226, 238, 1);
+    --ebb: 
+  rgba(227, 227, 227, 1);
+    --gallery: 
+  rgba(239, 239, 239, 1);
+    --alice-blue: 
+  rgba(239, 247, 252, 1);
+    --feta: 
+  rgba(241, 254, 232, 1);
+    --white: 
+  rgba(255, 255, 255, 1);
+  
+    --font-size-xs: 13px;
+    --font-size-s2: 14px;
+    --font-size-m2: 16px;
+    --font-size-l2: 20px;
+    --font-size-xl3: 18px;
+    --font-size-xl2: 24px;
+    --font-size-xxl2: 30px;
+  
+    --font-family-poppins: "Poppins";
+  }
+  
+  
+  
+  .poppins-semi-bold-black-20px-2 {
+    color: var(--black-2);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l2);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .poppins-normal-black-14px3 {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s2);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .poppins-medium-black-24px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xl2);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-semi-bold-sonic-silver-20px {
+    color: var(--sonic-silver);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l2);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .poppins-medium-white-16px {
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m2);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-semi-bold-black-16px2 {
+    color: var(--black-2);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m2);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .poppins-normal-black-14px2 {
+    color: var(--black-2);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s2);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .poppins-normal-green-blue-14px {
+    color: var(--green-blue);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s2);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .poppins-medium-black-13px-2 {
+    color: var(--black-2);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-bold-black-13px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    font-style: normal;
+  }
+  .poppins-medium-black-18px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xl3);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-medium-dove-gray-16px {
+    color: var(--dove-gray);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m2);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-medium-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m2);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-medium-black-14px-22 {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s2);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-medium-black-13px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-medium-black-30px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xxl2);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-semi-bold-black-20px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l2);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .poppins-normal-eerie-black-14px {
+    color: var(--eerie-black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s2);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .border-0-2px-dove-gray {
+    border-width: 0.2px;
+    border-style: solid;
+    border-color: var(--dove-gray);
+  }
+  .poppins-medium-black-20px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-l2);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-semi-bold-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m2);
+    font-weight: 600;
+    font-style: normal;
+  }
+  .border-1px-mist-gray {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--mist-gray);
+  }
+  .poppins-medium-lima-55-4px {
+    color: var(--lima);
+    font-family: var(--font-family-poppins);
+    font-size: 55.425235748291016px;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-medium-black-18px-2 {
+    color: var(--black-3);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-xl3);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .poppins-normal-white-14px {
+    color: var(--white);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s2);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .poppins-normal-eerie-black-12px {
+    color: var(--eerie-black);
+    font-family: var(--font-family-poppins);
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .poppins-medium-black-14px2 {
+    color: var(--black-2);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s2);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .border-0-3px-dove-gray {
+    border-width: 0.3px;
+    border-style: solid;
+    border-color: var(--dove-gray);
+  }
+  .poppins-normal-white-16px {
+    color: var(--white);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m2);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .border-0-5px-black {
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: var(--black);
+  }
+  .poppins-normal-black-16px {
+    color: var(--black);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m2);
+    font-weight: 400;
+    font-style: normal;
+  }
+  .border-0-2px-black {
+    border-width: 0.2px;
+    border-style: solid;
+    border-color: var(--black);
+  }
+  .border-0-5px-botticelli {
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: var(--botticelli);
+  }
+  .poppins-medium-white-14px {
+    color: var(--white);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-s2);
+    font-weight: 500;
+    font-style: normal;
+  }
+  .border-1px-dove-gray-2 {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--dove-gray-2);
+  }
+  .poppins-normal-green-blue-16px {
+    color: var(--green-blue);
+    font-family: var(--font-family-poppins);
+    font-size: var(--font-size-m2);
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.company-on-boarding-1 {
+  align-items: center;
+  background-color: var(--white);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 1144px;
+  width: 1728px;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.flex-row {
+  align-items: center;
+  display: flex;
+  margin-right: 80px;
+  margin-top: 57px;
+  min-width: 1408px;
+}
+
+.asset-3hyreman_logo-1 {
+  height: 657px;
+  width: 484px;
+}
+
+.frame-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22.71px;
+  margin-left: 354px;
+  min-height: 608px;
+  width: 570px;
+}
+
+.frame-171 {
+  align-items: center;
+  background-color: 
+#cce2ee;
+  box-shadow: 0px 4px 4px 
+#00000040;
+  display: flex;
+  flex-direction: column;
+  height: 572px;
+  margin-top: 32px;
+  padding: 63px 0;
+  width: 570px;
+}
+
+.frame-14 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: min-content;
+  margin-right: 2px;
+  margin-top: 15px;
+  width: min-content;
+}
+
+.email {
+  letter-spacing: 0;
+  margin-top: -1px;
+  min-width: 38px;
+}
+
+.frame-143-1 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  height: min-content;
+  padding: 8px 10px;
+  width: 326px;
+}
+
+.enter-email {
+  letter-spacing: 0;
+  margin-top: -0.2px;
+  min-width: 74px;
+}
+
+.frame-container-1 {
+  align-items: flex-start;
+  display: flex;
+  height: 62px;
+  margin-right: 2px;
+  margin-top: 31px;
+  min-width: 326px;
+}
+
+.frame-144 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: min-content;
+  width: min-content;
+}
+
+.frame-143 {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  height: min-content;
+  padding: 8px 10px;
+  width: 153px;
+}
+
+.enter-first-name {
+  letter-spacing: 0;
+  margin-top: -0.2px;
+  min-width: 104px;
+}
+
+.st-name {
+  letter-spacing: 0;
+  margin-top: -1px;
+  min-width: 75px;
+}
+
+.frame-145 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: min-content;
+  margin-left: 20px;
+  width: min-content;
+}
+
+.enter-last-name {
+  letter-spacing: 0;
+  margin-top: -0.2px;
+  min-width: 103px;
+}
+
+.flex-row-1 {
+  align-items: flex-end;
+  display: flex;
+  height: 17px;
+  margin-left: 1px;
+  margin-top: 12px;
+  min-width: 309px;
+}
+
+.i-agree-with-the-ter {
+  color: 
+transparent;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-left: 7px;
+  min-height: 17px;
+  min-width: 287px;
+}
+
+.span1 {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.rectangle-159 {
+  background-color: var(--white);
+  height: 15px;
+  width: 15px;
+}
+
+.get-started-by-creat {
+  color: 
+#353535;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s2);
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-top: 5px;
+  min-height: 21px;
+  text-align: center;
+  width: 368px;
+}
+
+.title {
+  color: var(--green-blue);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl2);
+  font-weight: 600;
+  letter-spacing: 0;
+  min-height: 36px;
+  text-align: center;
+  width: 368px;
+}
+
+.already-have-an-account-log-in {
+  color: 
+transparent;
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-right: 18px;
+  margin-top: 9px;
+  min-height: 15px;
+  min-width: 168px;
+}
+
+.span0 {
+  color: 
+#8c8c8c80;
+}
+
+.span1-1 {
+  color: 
+#00000080;
+}
+
+.span2 {
+  color: var(--blue-whale);
+}
+
+.primary-buttonn {
+  align-items: center;
+  background-color: var(--green-blue);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-right: 1px;
+  margin-top: 41px;
+  padding: 8px 12px;
+  width: 213px;
+}
+
+.frame-11 {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+  height: min-content;
+  width: min-content;
+}
+
+.create {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s2);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 24px;
+  margin-top: -1px;
+  min-width: 53px;
+  white-space: nowrap;
+}
+
+.enter-password {
+  letter-spacing: 0;
+  margin-top: -0.2px;
+  min-width: 101px;
+}
+
+.password {
+  letter-spacing: 0;
+  margin-top: -1px;
+  min-width: 68px;
+}
+
+.frame-172 {
+  align-items: flex-start;
+  display: flex;
+  gap: 22px;
+  height: min-content;
+  width: min-content;
+}
+
+.rectangle-160 {
+  background-color: var(--green-blue);
+  border-radius: 100px;
+  height: 4px;
+  min-width: 48px;
+}
+
+.rectangle-161 {
+  background-color: 
+#d9d9d9;
+  border-radius: 100px;
+  height: 4px;
+  min-width: 48px;
+}
+
+.frame-149 {
+  height: 100px;
+  width: 1728px;
+}
