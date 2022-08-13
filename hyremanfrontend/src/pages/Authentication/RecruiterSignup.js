@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SignupNav from "../../components/SignupNav";
 import Logo from "../../assets/logo/HyremanAsset.svg";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 const RecruiterSignup = () => {
   const [firstName, setFirstName] = useState("");
@@ -9,6 +10,8 @@ const RecruiterSignup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isRecruiter, setIsRecruiter] = useState(false);
+
+  let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,6 +39,8 @@ const RecruiterSignup = () => {
         setEmail("");
         setPassword("");
         setIsRecruiter(false);
+        navigate("/login");
+
       })
       .catch((err) => {
         console.log(err);
@@ -138,6 +143,7 @@ const RecruiterSignup = () => {
                       type="checkbox"
                       name="is_recruiter"
                       id="gridCheck1"
+                      required
                       value={isRecruiter}
                       onChange={(e) => setIsRecruiter(e.target.checked)}
                     />

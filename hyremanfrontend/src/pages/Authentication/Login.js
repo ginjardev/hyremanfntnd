@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SignupNav from "../../components/SignupNav";
 import Logo from "../../assets/logo/HyremanAsset.svg";
 import "./Login.css";
@@ -9,6 +9,12 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
+
+  // const [data, setData] = useState([])
+
+  //   useEffect(() => {
+  //       localStorage.setItem('data', JSON.stringify(data))
+  //   } , [data])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +32,7 @@ const Login = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data.user.is_recruiter){
+        if(data.user.is_recruiter === true){
           navigate("/dashboard");
         }
         setEmail("");

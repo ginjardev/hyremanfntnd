@@ -17,7 +17,7 @@ const sidebar_menu = [
     {
         id: 2,
         icon: JobsIcon,
-        path: '/jobs',
+        path: '#',
         title: 'Jobs',
     },
     {
@@ -29,7 +29,7 @@ const sidebar_menu = [
     {
         id: 4,
         icon: TestLibraryIcon,
-        path: '/test-library',
+        path: '#',
         title: 'Test Library',
     },
     {
@@ -41,13 +41,13 @@ const sidebar_menu = [
     {
         id: 6,
         icon: SettingsIcon,
-        path: '/setting',
+        path: '#',
         title: 'Setting',
     },
     {
         id: 7,
         icon: LogoutIcon,
-        path: '/logout',
+        path: '/',
         title: 'Log Out',
     },
 ]
