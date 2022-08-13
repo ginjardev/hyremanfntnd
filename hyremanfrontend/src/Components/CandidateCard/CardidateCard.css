@@ -1,0 +1,17 @@
+.card{
+    width: 100%;
+}
+
+.card-top {
+    width: 95%;
+}
+
+.card-bottom{
+    width: 70%;
+}
+h2{
+    color: green;
+}
+.score{
+    background-color:rgb(203, 241, 208)
+}

@@ -1,0 +1,17 @@
+.landing-image{
+    /* height: 100vh; */
+}
+.mt-5{
+   margin-top: 9rem;
+   
+}
+.navLeft{
+    width: 45%;
+}
+.navRight{
+    width: 40%;
+}
+/* .landing-image{
+    object-fit: contain;
+    width: 100%;
+} */

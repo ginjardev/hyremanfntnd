@@ -1,40 +1,50 @@
-.App {
-  text-align: center;
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+}
+.dashboard-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F2F5;
+}
+.box-container{
+    margin-left: 80px;
+    margin-right: 15px
+}
+.filter{
+    background-color: #fdfdfd;
+        margin-right: 40px
+}
+.result{
+    background-color: #fdfdfd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
+/* my css begins */
+
 .formbox{
-  background-color: #CCE2EE;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    background-color: #CCE2EE;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbtn{
+    color: #f1f4f6;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.rounded{
+    border-radius: 15px !important;
   }
-  to {
-    transform: rotate(360deg);
+  .circle {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-color: gray;
   }
-}
+  .dash{
+    width: 22%;
+  }
+  .btn {
+    background-color: #1768AC !important;
+    color: white !important;
+    border-radius: 10px !important;
+  }
