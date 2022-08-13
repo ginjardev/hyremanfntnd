@@ -12,7 +12,6 @@ const RecruiterSignup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(firstName, lastName, email, password, isRecruiter);
 
     // send data to backend
     fetch("http://localhost:8000/users/create/", {
@@ -32,6 +31,11 @@ const RecruiterSignup = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        setFirstName("");
+        setLastName("");
+        setEmail("");
+        setPassword("");
+        setIsRecruiter(false);
       })
       .catch((err) => {
         console.log(err);
