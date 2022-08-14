@@ -30,30 +30,146 @@ const outerTheme = createTheme({
   },
 });
 
+const all_orders = [
+  {
+    fullname: 'Regina Boatema',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Caroline Enyonam',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Veronique Abakah',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Mista Boakye',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Slim Bansi',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Amen Olabode',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Timothy Asare',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Samuel Setsofia',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Miriam Wamey',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Joy Eziashi',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Shulamite John',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Benedicta Frema Boamah',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Somto Chike-Nwaka',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Oluwawemimo Olapade',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+];
+
 function Candidates() {
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
-  const [orders, setOrders] = useState([
-    {
-      fullname: 'Regina Boatema',
-      email: 'reginaboatema@gmail.com',
-      phone: '0209414362',
-      skillsMatch: '98%',
-      testScore: 0,
-      owner: 'Mista Boakye',
-      stage: 'Interview',
-    },
-  ]);
+  const [orders, setOrders] = useState(all_orders);
   const [page, setPage] = useState(1);
   const [pagination, setPagination] = useState([]);
   const [tab, setTab] = useState('one');
 
   useEffect(() => {
-    // setPagination(calculateRange(all_orders, 5));
-    // setOrders(sliceData(all_orders, page, 5));
-
-    setPagination(calculateRange(orders, 5));
-    setOrders(sliceData(orders, page, 5));
+    setPagination(calculateRange(all_orders, 5));
+    setOrders(sliceData(all_orders, page, 5));
   }, []);
 
   // Search
@@ -108,7 +224,7 @@ function Candidates() {
   // Change Page
   const __handleChangePage = (new_page) => {
     setPage(new_page);
-    setOrders(sliceData(orders, new_page, 5));
+    setOrders(sliceData(all_orders, new_page, 5));
   };
 
   return (
