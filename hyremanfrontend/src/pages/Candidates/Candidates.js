@@ -1,138 +1,391 @@
-import React, {useState, useEffect} from 'react';
-import DashboardNav from '../../components/DashboardHeader/DashbooardNav';
+import React, { useState, useEffect } from 'react';
+import DashboardNav from '../../Components/DashboardHeader/DashbooardNav';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import all_orders from '../../constants/orders';
-import {calculateRange, sliceData} from '../../utils/table-pagination';
+import { calculateRange, sliceData } from '../../utils/table-pagination';
 
 import '../styles.css';
 import DoneIcon from '../../assets/icons/done.svg';
 import CancelIcon from '../../assets/icons/cancel.svg';
 import RefundedIcon from '../../assets/icons/refunded.svg';
 import CandidatesList from '../../constants/candidatesList';
+import BackButton from '../../assets/icons/back-button';
+import CopyUrl from '../../assets/icons/copy-url';
+import Facebook from '../../assets/icons/facebook';
+import Twitter from '../../assets/icons/twitter';
+import LinkedIn from '../../assets/icons/linkedin';
+import More from '../../assets/icons/more';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import Button from '../../Components/Button';
+import { useNavigate } from 'react-router-dom';
 
-function Candidates () {
-    const [search, setSearch] = useState('');
-    const [orders, setOrders] = useState(all_orders);
-    const [page, setPage] = useState(1);
-    const [pagination, setPagination] = useState([]);
+const outerTheme = createTheme({
+  palette: {
+    primary: {
+      main: '#000',
+    },
+  },
+});
 
-    useEffect(() => {
-        setPagination(calculateRange(all_orders, 5));
-        setOrders(sliceData(all_orders, page, 5));
-    }, []);
+const all_orders = [
+  {
+    fullname: 'Regina Boatema',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Caroline Enyonam',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Veronique Abakah',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Mista Boakye',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Slim Bansi',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Amen Olabode',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Timothy Asare',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Samuel Setsofia',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Miriam Wamey',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Joy Eziashi',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Shulamite John',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Benedicta Frema Boamah',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Somto Chike-Nwaka',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+  {
+    fullname: 'Oluwawemimo Olapade',
+    email: 'reginaboatema@gmail.com',
+    phone: '0209414362',
+    skillsMatch: '98%',
+    testScore: 0,
+    owner: 'Mista Boakye',
+    stage: 'Interview',
+  },
+];
 
-    // Search
-    const __handleSearch = (event) => {
-        setSearch(event.target.value);
-        if (event.target.value !== '') {
-            let search_results = orders.filter((item) =>
-                item.first_name.toLowerCase().includes(search.toLowerCase()) ||
-                item.last_name.toLowerCase().includes(search.toLowerCase()) ||
-                item.product.toLowerCase().includes(search.toLowerCase())
-            );
-            setOrders(search_results);
-        }
-        else {
-            __handleChangePage(1);
-        }
-    };
+function Candidates() {
+  const navigate = useNavigate();
+  const [search, setSearch] = useState('');
+  const [orders, setOrders] = useState(all_orders);
+  const [page, setPage] = useState(1);
+  const [pagination, setPagination] = useState([]);
+  const [tab, setTab] = useState('one');
 
-    // Change Page 
-    const __handleChangePage = (new_page) => {
-        setPage(new_page);
-        setOrders(sliceData(all_orders, new_page, 5));
+  useEffect(() => {
+    setPagination(calculateRange(all_orders, 5));
+    setOrders(sliceData(all_orders, page, 5));
+  }, []);
+
+  // Search
+  const __handleSearch = (event) => {
+    setSearch(event.target.value);
+    if (event.target.value !== '') {
+      let search_results = orders.filter(
+        (item) =>
+          item.first_name.toLowerCase().includes(search.toLowerCase()) ||
+          item.last_name.toLowerCase().includes(search.toLowerCase()) ||
+          item.product.toLowerCase().includes(search.toLowerCase())
+      );
+      setOrders(search_results);
+    } else {
+      __handleChangePage(1);
     }
+  };
 
-    return(
-        <div className='dashboard-content'>
-            <DashboardNav navTitle='Candidates'/>
+  function TabPanel(props) {
+    const { children, value, index, ...other } = props;
 
-            <div className='dashboard-content-container'>
-                <div className='dashboard-content-header'>
-                    <h2>Orders List</h2>
-                    <div className='dashboard-content-search'>
-                        <input
-                            type='text'
-                            value={search}
-                            placeholder='Search..'
-                            className='dashboard-content-input'
-                            onChange={e => __handleSearch(e)} />
-                    </div>
-                </div>
+    return (
+      <div
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+      >
+        {value === index && (
+          <Box sx={{ p: 3 }}>
+            <Typography>{children}</Typography>
+          </Box>
+        )}
+      </div>
+    );
+  }
 
-                <table>
-                    <thead>
-                        <th>ID</th>
-                        <th>DATE</th>
-                        <th>STATUS</th>
-                        <th>COSTUMER</th>
-                        <th>PRODUCT</th>
-                        <th>REVENUE</th>
-                    </thead>
+  function a11yProps(index) {
+    return {
+      id: `simple-tab-${index}`,
+      'aria-controls': `simple-tabpanel-${index}`,
+    };
+  }
 
-                    {orders.length !== 0 ?
-                        <tbody>
-                            {orders.map((order, index) => (
-                                <tr key={index}>
-                                    <td><span>{order.id}</span></td>
-                                    <td><span>{order.date}</span></td>
-                                    <td>
-                                        <div>
-                                            {order.status === 'Paid' ?
-                                                <img
-                                                    src={DoneIcon}
-                                                    alt='paid-icon'
-                                                    className='dashboard-content-icon' />
-                                            : order.status === 'Canceled' ?
-                                                <img
-                                                    src={CancelIcon}
-                                                    alt='canceled-icon'
-                                                    className='dashboard-content-icon' />
-                                            : order.status === 'Refunded' ?
-                                                <img
-                                                    src={RefundedIcon}
-                                                    alt='refunded-icon'
-                                                    className='dashboard-content-icon' />
-                                            : null}
-                                            <span>{order.status}</span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>
-                                            <img 
-                                                src={order.avatar}
-                                                className='dashboard-content-avatar'
-                                                alt={order.first_name + ' ' +order.last_name} />
-                                            <span>{order.first_name} {order.last_name}</span>
-                                        </div>
-                                    </td>
-                                    <td><span>{order.product}</span></td>
-                                    <td><span>${order.price}</span></td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    : null}
-                </table>
+  const [value, setValue] = React.useState(1);
 
-                {orders.length !== 0 ?
-                    <div className='dashboard-content-footer'>
-                        {pagination.map((item, index) => (
-                            <span 
-                                key={index} 
-                                className={item === page ? 'active-pagination' : 'pagination'}
-                                onClick={() => __handleChangePage(item)}>
-                                    {item}
-                            </span>
-                        ))}
-                    </div>
-                : 
-                    <div className='dashboard-content-footer'>
-                        <span className='empty-table'>No data</span>
-                    </div>
-                }
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  // Change Page
+  const __handleChangePage = (new_page) => {
+    setPage(new_page);
+    setOrders(sliceData(all_orders, new_page, 5));
+  };
+
+  return (
+    <div className="dashboard-content">
+      <DashboardNav navTitle="Resume Bank" />
+      <div>
+        <div className="flex-row m-3 w-full justify-content-between px-5">
+          <div className="flex-row">
+            <div className="flex-row back-button hover">
+              <BackButton />
             </div>
+            <div className="flex-col title-location">
+              <span className="title-location-title">Junior Web Developer</span>
+              <div className="flex-row">
+                <span className="title-location-type">Full Time</span>
+                <span className="title-location-location">Accra, Ghana</span>
+              </div>
+            </div>
+            <div className="flex-row">
+              <span className="copy-url hover">Copy Job url</span>
+              <div className="hover m-0">
+                <CopyUrl />
+              </div>
+            </div>
+          </div>
+          <div className="flex-row h-5">
+            <span className="me-2">Share on</span>
+            <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
+              <Facebook />
+            </div>
+            <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
+              <Twitter />
+            </div>
+            <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
+              <LinkedIn />
+            </div>
+          </div>
         </div>
-    )
+        <div className="d-flex justify-content-end m-3 pe-5">
+          <Button
+            icon={<></>}
+            title="Submit Candidate"
+            className="btn btn-sm pe-3"
+          />
+        </div>
+        <Box className="ms-5" sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <ThemeProvider theme={outerTheme}>
+            <Tabs value={value} onChange={handleChange} textColor="primary">
+              <Tab label="JOB DETAILS" {...a11yProps(0)} />
+              <Tab label="CANDIDATES" {...a11yProps(1)} />
+              <Tab label="NOTES" {...a11yProps(2)} />
+            </Tabs>
+          </ThemeProvider>
+        </Box>
+        <TabPanel value={value} index={0}>
+          Item One
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <div className="table-head">
+            <table>
+              <thead className="">
+                <th className="py-3">
+                  <input type="checkbox" name="name1" />
+                </th>
+                <th className="text-black">Full Name</th>
+                <th className="text-black">Email</th>
+                <th className="text-black">Phone Number</th>
+                <th className="text-black">Skills Match</th>
+                <th className="text-black">Test Score</th>
+                <th className="text-black">Owner</th>
+                <th className="text-black">Stage</th>
+                <th></th>
+              </thead>
+
+              {orders.length !== 0 ? (
+                <tbody>
+                  {orders.map((order, index) => {
+                    console.log(order);
+                    return (
+                      <tr
+                        className="bg-light hover"
+                        key={index}
+                        onClick={() => {
+                          navigate('/candidates-details');
+                        }}
+                      >
+                        <td>
+                          <input type="checkbox" name="name1" />
+                          &nbsp;
+                        </td>
+                        <td>
+                          <span>{order.fullname}</span>
+                        </td>
+                        <td>
+                          <span>{order.email}</span>
+                        </td>
+                        <td>
+                          <div>
+                            <span>{order.phone}</span>
+                          </div>
+                        </td>
+                        <td>
+                          <div>
+                            <span
+                              className={
+                                parseInt(order.skillsMatch.replace('%', '')) >
+                                50
+                                  ? 'text-pass'
+                                  : 'text-fail'
+                              }
+                            >
+                              {order.skillsMatch}
+                            </span>
+                          </div>
+                        </td>
+                        <td>
+                          <span>{order.testScore}</span>
+                        </td>
+                        <td>
+                          <span>{order.owner}</span>
+                        </td>
+                        <td>
+                          <span>{order.stage}</span>
+                        </td>
+                        <td className="hover">
+                          <More />
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              ) : null}
+            </table>
+
+            {orders.length !== 0 ? (
+              <div className="dashboard-content-footer bg-light">
+                {pagination.map((item, index) => (
+                  <span
+                    key={index}
+                    className={
+                      item === page ? 'active-pagination' : 'pagination'
+                    }
+                    onClick={() => __handleChangePage(item)}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <div className="dashboard-content-footer bg-light">
+                <span className="empty-table">No data</span>
+              </div>
+            )}
+          </div>
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          Item Three
+        </TabPanel>
+      </div>
+    </div>
+  );
 }
 
 export default Candidates;
