@@ -3,18 +3,15 @@ import sidebar_menu from '../../constants/sidebar-menu';
 import SideBar from '../../components/Sidebar/Sidebar';
 import Candidates from '../Candidates/Candidates';
 
-
-const CandidatesEntry = () => {
-    return (
-        <div>
-            <div className='dashboard-container'>
-                <SideBar menu={sidebar_menu} />
-                <div className='dashboard-body'>
-                    <Candidates/>
-                </div>
-            </div>
-        </div>
-    );
+const CandidatesEntry = ({ child }) => {
+  return (
+    <div>
+      <div className="dashboard-container">
+        <SideBar menu={sidebar_menu} />
+        <div className="dashboard-body">{child}</div>
+      </div>
+    </div>
+  );
 };
 
 export default CandidatesEntry;

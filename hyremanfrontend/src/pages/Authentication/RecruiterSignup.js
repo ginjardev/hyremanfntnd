@@ -20,7 +20,7 @@ const RecruiterSignup = () => {
     fetch("http://localhost:8000/users/create/", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         first_name: firstName,
@@ -40,7 +40,6 @@ const RecruiterSignup = () => {
         setPassword("");
         setIsRecruiter(false);
         navigate("/login");
-
       })
       .catch((err) => {
         console.log(err);

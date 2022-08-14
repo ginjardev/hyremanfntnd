@@ -1,18 +1,16 @@
-import React, { useState } from "react";
-import "./style.css";
+import React, {  useState  } from "react";
+import "./style.css";;
 
 function TagsInput({ filterName, getResumesByTag }) {
   const [tags, setTags] = useState([]);
 
-  function handleKeyDown(e) {
-    if (e.key !== "Enter") return;
-    const value = e.target.value;
-    console.log(value);
-    getResumesByTag(value, filterName);
-    if (!value.trim()) return;
-    setTags([...tags, value]);
-    e.target.value = "";
-  }
+    function handleKeyDown(e){
+        if(e.key !== 'Enter') return
+        const value = e.target.value
+        if(!value.trim()) return
+        setTags([...tags, value])
+        e.target.value = ''
+    }
 
   function removeTag(index) {
     setTags(tags.filter((el, i) => i !== index));
@@ -39,3 +37,4 @@ function TagsInput({ filterName, getResumesByTag }) {
 }
 
 export default TagsInput;
+

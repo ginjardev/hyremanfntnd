@@ -28,6 +28,7 @@ const Login = () => {
       .then((data) => {
         localStorage.setItem('token', data.token);
         if(data.user.is_recruiter === true){
+
           navigate("/dashboard");
         }
         setEmail("");
