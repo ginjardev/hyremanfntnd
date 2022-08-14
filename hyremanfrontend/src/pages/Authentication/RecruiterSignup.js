@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SignupNav from "../../components/SignupNav";
+import SignupNav from "../../Components/SignupNav";
 import Logo from "../../assets/logo/HyremanAsset.svg";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +20,7 @@ const RecruiterSignup = () => {
     fetch("http://localhost:8000/users/create/", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         first_name: firstName,
@@ -40,7 +40,6 @@ const RecruiterSignup = () => {
         setPassword("");
         setIsRecruiter(false);
         navigate("/login");
-
       })
       .catch((err) => {
         console.log(err);

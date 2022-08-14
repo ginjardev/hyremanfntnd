@@ -116,8 +116,8 @@ td span {
     text-transform: none;
     vertical-align: unset;
     text-decoration: none;
-    color: gray;
-    font-weight: 700;
+    color: black;
+    font-weight: 400;
 }
 .dashboard-content-icon {
     width: 20px;
@@ -165,4 +165,83 @@ td span {
 }
 .card-holder{
     width: 65%;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.back-button {
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    background-color: #EFEFEF;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-location {
+margin-left: 15px;
+}
+
+.title-location-title {
+font-weight: 700;
+letter-spacing: 1px;
+font-size: x-large;
+}
+
+.title-location-type {
+    color: #00000050;
+    font-size: small;
+    margin-right: 15px;
+}
+
+.title-location-location {
+    color: #00000050;
+    font-size: small;
+}
+
+.copy-url {
+    color: #00000050;
+    font-size: small;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.w-full {
+    flex: 1;
+}
+
+.h-5 {
+    flex-wrap: wrap;
+    align-items: baseline
+}
+.tab-items {
+    color:#00000050;
+}
+
+.bg-red{
+    background-color: red;
+}
+.text-black {
+    color: black;
+}
+
+.text-pass {
+    color:#60C51D;
+}
+
+.text-fail {
+    color: red;
+}
+
+.z-10 {
+    z-index: 999;
 }

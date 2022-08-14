@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SignupNav from "../../components/SignupNav";
+import SignupNav from "../../Components/SignupNav";
 import Logo from "../../assets/logo/HyremanAsset.svg";
 import "./Login.css";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -32,7 +32,7 @@ const Login = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        if(data.user.is_recruiter === true){
+        if (data.user.is_recruiter === true) {
           navigate("/dashboard");
         }
         setEmail("");

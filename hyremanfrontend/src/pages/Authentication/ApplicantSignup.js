@@ -1,10 +1,8 @@
-import React, { useState} from "react";
-import SignupNav from "../../components/SignupNav";
+import React, { useState } from "react";
+import SignupNav from "../../Components/SignupNav";
 import Logo from "../../assets/logo/HyremanAsset.svg";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
-
-
 
 const ApplicantSignup = () => {
   const [firstName, setFirstName] = useState("");
@@ -13,7 +11,7 @@ const ApplicantSignup = () => {
   const [password, setPassword] = useState("");
   const [isRecruiter, setIsRecruiter] = useState(false);
 
-  let navigate = useNavigate('/applicant-signup');
+  let navigate = useNavigate("/applicant-signup");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -57,9 +55,10 @@ const ApplicantSignup = () => {
             <img src={Logo} alt="Hyreman" className="m-4" />
           </div>
           <div className="w-50 d-flex justify-content-center mt-5">
-            <form 
-            onSubmit={handleSubmit}
-            className="w-75 d-flex align-content-center justify-content-center mt-5">
+            <form
+              onSubmit={handleSubmit}
+              className="w-75 d-flex align-content-center justify-content-center mt-5"
+            >
               <div className=" d-flex flex-column rounded p-4 loginBox h-75 shadow-sm">
                 <div className="text-center">
                   <p className="fs-4">Create Account</p>
@@ -113,7 +112,7 @@ const ApplicantSignup = () => {
                       placeholder="Enter Email"
                       id="inputEmail4"
                       value={email}
-                      onChange={(e) => setEmail(e.target.value)}  
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import RecruiterSignup from './pages/Authentication/RecruiterSignup';
 import ApplicantSignup from './pages/Authentication/ApplicantSignup';
@@ -13,25 +13,24 @@ import JobsEntry from './pages/Entry/JobsEntry';
 import SettingsEntry from './pages/Entry/SettingsEntry';
 import TestLibraryEntry from './pages/Entry/TestLibraryEntry';
 
-
-function App () {
-  return(
+function App() {
+  return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<HomePage/>}/>
-        <Route path='/recruiter-signup' element={<RecruiterSignup/>}/>
-        <Route path='/applicant-signup' element={<ApplicantSignup/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/resume-bank' element={<ResumeBankEntry/>}/>
-        <Route path="/candidates" element={<CandidatesEntry/>} />
-        <Route path="/dashboard" element={<DashboardEntry/>} />
-        <Route path="/jobs" element={<JobsEntry/>} />
-        <Route path="/profile" element={<ProfileEntry/>} />
-        <Route path="/setting" element={<SettingsEntry/>} />
-        <Route path="/test-library" element={<TestLibraryEntry/>} />
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/recruiter-signup" element={<RecruiterSignup />} />
+        <Route path="/applicant-signup" element={<ApplicantSignup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/resume-bank" element={<ResumeBankEntry />} />
+        <Route path="/candidates" element={<CandidatesEntry />} />
+        <Route path="/dashboard" element={<DashboardEntry />} />
+        <Route path="/jobs" element={<JobsEntry />} />
+        <Route path="/profile" element={<ProfileEntry />} />
+        <Route path="/setting" element={<SettingsEntry />} />
+        <Route path="/test-library" element={<TestLibraryEntry />} />
       </Routes>
     </Router>
-  )
+  );
 }
 
 export default App;
