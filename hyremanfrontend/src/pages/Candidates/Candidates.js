@@ -20,7 +20,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '../../Components/Button';
-import Add from '../../assets/icons/add-plus.svg';
+import { useNavigate } from 'react-router-dom';
 
 const outerTheme = createTheme({
   palette: {
@@ -31,6 +31,7 @@ const outerTheme = createTheme({
 });
 
 function Candidates() {
+  const navigate = useNavigate();
   const [search, setSearch] = useState('');
   const [orders, setOrders] = useState([
     {
@@ -98,7 +99,7 @@ function Candidates() {
     };
   }
 
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -114,7 +115,7 @@ function Candidates() {
     <div className="dashboard-content">
       <DashboardNav navTitle="Resume Bank" />
       <div>
-        <div className="flex-row m-3 w-full justify-content-between">
+        <div className="flex-row m-3 w-full justify-content-between px-5">
           <div className="flex-row">
             <div className="flex-row back-button">
               <BackButton />
@@ -144,14 +145,14 @@ function Candidates() {
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-end m-3">
+        <div className="d-flex justify-content-end m-3 pe-5">
           <Button
             icon={<></>}
             title="Submit Candidate"
             className="btn btn-sm pe-3"
           />
         </div>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Box className="ms-5" sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <ThemeProvider theme={outerTheme}>
             <Tabs value={value} onChange={handleChange} textColor="primary">
               <Tab label="JOB DETAILS" {...a11yProps(0)} />
@@ -167,7 +168,9 @@ function Candidates() {
           <div className="dashboard-content-container">
             <table>
               <thead>
-                <th></th>
+                <th>
+                  <input type="checkbox" name="name1" />
+                </th>
                 <th className="text-black">Full Name</th>
                 <th className="text-black">Email</th>
                 <th className="text-black">Phone Number</th>
@@ -183,7 +186,13 @@ function Candidates() {
                   {orders.map((order, index) => {
                     console.log(order);
                     return (
-                      <tr key={index}>
+                      <tr
+                        key={index}
+                        className="hover"
+                        onClick={() => {
+                          navigate('/candidates-details');
+                        }}
+                      >
                         <td>
                           <input type="checkbox" name="name1" />
                           &nbsp;

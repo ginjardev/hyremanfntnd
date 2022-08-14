@@ -12,6 +12,9 @@ import ProfileEntry from './pages/Entry/ProfileEntry';
 import JobsEntry from './pages/Entry/JobsEntry';
 import SettingsEntry from './pages/Entry/SettingsEntry';
 import TestLibraryEntry from './pages/Entry/TestLibraryEntry';
+import CandidateList from './pages/Candidates/Candidates';
+import CandidateOverview from './pages/Candidates/CandidatesOverview';
+import CandidatesList from './constants/candidatesList';
 
 function App() {
   return (
@@ -22,7 +25,14 @@ function App() {
         <Route path="/applicant-signup" element={<ApplicantSignup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/resume-bank" element={<ResumeBankEntry />} />
-        <Route path="/candidates" element={<CandidatesEntry />} />
+        <Route
+          path="/candidates"
+          element={<CandidatesEntry child={<CandidateList />} />}
+        />
+        <Route
+          path="/candidates-details"
+          element={<CandidatesEntry child={<CandidateOverview />} />}
+        />
         <Route path="/dashboard" element={<DashboardEntry />} />
         <Route path="/jobs" element={<JobsEntry />} />
         <Route path="/profile" element={<ProfileEntry />} />
