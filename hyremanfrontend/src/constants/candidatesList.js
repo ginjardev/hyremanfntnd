@@ -1,4 +1,4 @@
-import ImageIcon from '../assets/icons/account-circle-filled.svg'
+import ImageIcon from '../assets/icons/account-circle-filled.svg';
 
 const CandidatesList = [
     {

@@ -4,17 +4,12 @@ import Logo from "../../assets/logo/HyremanAsset.svg";
 import "./Login.css";
 import { NavLink, useNavigate } from "react-router-dom";
 
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
-  // const [data, setData] = useState([])
-
-  //   useEffect(() => {
-  //       localStorage.setItem('data', JSON.stringify(data))
-  //   } , [data])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +26,7 @@ const Login = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        localStorage.setItem('token', data.token);
         if(data.user.is_recruiter === true){
           navigate("/dashboard");
         }

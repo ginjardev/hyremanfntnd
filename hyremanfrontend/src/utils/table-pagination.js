@@ -13,9 +13,6 @@ const sliceData = (data, page, rowsPerPage) => {
     return data.slice((page - 1) * rowsPerPage, page * rowsPerPage);
 }  
 
-let num = 4;
-
-console.log(sliceData(CandidatesList, num, 4 ));
 
 
 
