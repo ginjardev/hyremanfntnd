@@ -12,6 +12,7 @@ import Facebook from '../../assets/icons/facebook';
 import Twitter from '../../assets/icons/twitter';
 import LinkedIn from '../../assets/icons/linkedin';
 import Edit from '../../assets/icons/edit';
+import ChevronDown from '../../assets/icons/chevron-sort-down';
 
 import '../styles.css';
 
@@ -71,51 +72,56 @@ function Candidates() {
                 <span className="text-gray">Accra</span>
               </div>
               <div className="flex-row h-5 ms-5 mt-3 flex-3">
-                <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1">
+                <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
                   <Facebook />
                 </div>
-                <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1">
+                <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
                   <Twitter />
                 </div>
-                <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1">
+                <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
                   <LinkedIn />
                 </div>
               </div>
-              <div className="flex-row flex-1 justify-content-start mt-3">
+              <div className="flex-row flex-1 justify-content-start mt-3 hover">
                 <Edit />
               </div>
             </div>
             <div className="flex-row mt-4">
-              <div className="flex-col flex-1 text-gray fw-bold font-small">
+              <div className="flex-col flex-1 text-gray  font-small">
                 <span className="py-1">Email</span>
                 <span className="py-1">Gender</span>
                 <span className="py-1">Phone</span>
                 <span className="py-1">Country</span>
                 <span className="py-1">Stage</span>
               </div>
-              <div className="flex-col flex-3 text-black fw-bold font-small">
+              <div className="flex-col flex-3 fw-normal font-small">
                 <span className="py-1">caroline.kpogo@gmail.com</span>
                 <span className="py-1">Female</span>
                 <span className="py-1">02091515362</span>
                 <span className="py-1">Ghana</span>
-                <span className="py-1">Interview</span>
+                <div className="flex-row ">
+                  <span className="py-1 me-2">Interview</span>
+                  <div>
+                    <ChevronDown />
+                  </div>
+                </div>
               </div>
-              <div className="flex-col flex-1 text-gray fw-bold font-small">
+              <div className="flex-col flex-1 text-gray font-small">
                 <span className="py-1">Years of Experience</span>
                 <span className="py-1">Resume</span>
                 <span className="py-1">Cover Letter</span>
                 <span className="py-1">Expected Salary</span>
                 <span className="py-1">Expected Salary</span>
               </div>
-              <div className="flex-col flex-1 text-black fw-bold font-small">
+              <div className="flex-col flex-1 fw-normal font-small">
                 <span className="py-1">2</span>
-                <span className="py-1">View</span>
-                <span className="py-1">View</span>
+                <span className="py-1 hover text-extrabold">View</span>
+                <span className="py-1 hover text-extrabold">View</span>
                 <span className="py-1">2000</span>
                 <span className="py-1">2000</span>
               </div>
             </div>
-            <div className="flex-row font-medium fw-bold mt-5">
+            <div className="flex-row font-medium mt-5">
               <span className="text-gray flex-1">Experience</span>
               <div className="flex-8">
                 <div className="flex-row my-1">
@@ -138,7 +144,7 @@ function Candidates() {
                 </div>
               </div>
             </div>
-            <div className="flex-row font-medium fw-bold my-2">
+            <div className="flex-row font-medium my-2">
               <span className="text-gray flex-1">Education</span>
               <div className="flex-8">
                 <div className="flex-row my-1">
@@ -156,7 +162,7 @@ function Candidates() {
                 </div>
               </div>
             </div>
-            <div className="flex-row font-medium fw-bold my-2">
+            <div className="flex-row font-medium my-2">
               <span className="text-gray flex-1">Skills</span>
               <div className="flex-8">
                 <div className="flex-row my-1">
@@ -185,7 +191,7 @@ function Candidates() {
           </TabPanel>
           <TabPanel value={value} index={1}>
             <div className="flex-row justify-content-center">
-              <div className="d-inline-flex justify-content-center align-items-center px-5 py-2 border rounded-5">
+              <div className="d-inline-flex justify-content-center align-items-center px-5 py-2 border rounded-5 hover">
                 <div className=" p-1 rounded-circle border-blue me-4">
                   <Add fill={'#0964D8'} />
                 </div>

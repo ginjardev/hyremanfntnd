@@ -286,9 +286,9 @@ font-size: x-large;
     flex:8;
 }
 .table-head{
-    background-color: #2D83B5;
-    border-top: 1px solid #000000;
-    border-radius: 100px;
+    background-color: #CCE2EE;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     color: white;
     font-size: 0.75rem;
     font-weight: 700;
@@ -298,4 +298,13 @@ font-size: x-large;
 
 .hover:hover{
     cursor: pointer;
+}
+
+.text-extrabold {
+    font-weight: bolder;    
+    color: #0964D8;
+}
+
+.text-blackwithopacity {
+    font-weight: #00000050
 }

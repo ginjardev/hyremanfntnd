@@ -117,7 +117,7 @@ function Candidates() {
       <div>
         <div className="flex-row m-3 w-full justify-content-between px-5">
           <div className="flex-row">
-            <div className="flex-row back-button">
+            <div className="flex-row back-button hover">
               <BackButton />
             </div>
             <div className="flex-col title-location">
@@ -128,19 +128,21 @@ function Candidates() {
               </div>
             </div>
             <div className="flex-row">
-              <span className="copy-url">Copy Job url</span>
-              <CopyUrl />
+              <span className="copy-url hover">Copy Job url</span>
+              <div className="hover m-0">
+                <CopyUrl />
+              </div>
             </div>
           </div>
           <div className="flex-row h-5">
-            <span className="">Share on</span>
-            <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1">
+            <span className="me-2">Share on</span>
+            <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
               <Facebook />
             </div>
-            <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1">
+            <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
               <Twitter />
             </div>
-            <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1">
+            <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
               <LinkedIn />
             </div>
           </div>
@@ -165,10 +167,10 @@ function Candidates() {
           Item One
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <div className="dashboard-content-container">
+          <div className="table-head">
             <table>
-              <thead>
-                <th>
+              <thead className="">
+                <th className="py-3">
                   <input type="checkbox" name="name1" />
                 </th>
                 <th className="text-black">Full Name</th>
@@ -187,8 +189,8 @@ function Candidates() {
                     console.log(order);
                     return (
                       <tr
+                        className="bg-light hover"
                         key={index}
-                        className="hover"
                         onClick={() => {
                           navigate('/candidates-details');
                         }}
@@ -231,7 +233,7 @@ function Candidates() {
                         <td>
                           <span>{order.stage}</span>
                         </td>
-                        <td>
+                        <td className="hover">
                           <More />
                         </td>
                       </tr>
@@ -242,7 +244,7 @@ function Candidates() {
             </table>
 
             {orders.length !== 0 ? (
-              <div className="dashboard-content-footer">
+              <div className="dashboard-content-footer bg-light">
                 {pagination.map((item, index) => (
                   <span
                     key={index}
@@ -256,7 +258,7 @@ function Candidates() {
                 ))}
               </div>
             ) : (
-              <div className="dashboard-content-footer">
+              <div className="dashboard-content-footer bg-light">
                 <span className="empty-table">No data</span>
               </div>
             )}
