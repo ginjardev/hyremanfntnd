@@ -7,6 +7,7 @@ function TagsInput({ filterName, getResumesByTag }) {
     function handleKeyDown(e){
         if(e.key !== 'Enter') return
         const value = e.target.value
+        getResumesByTag(value,filterName);
         if(!value.trim()) return
         setTags([...tags, value])
         e.target.value = ''

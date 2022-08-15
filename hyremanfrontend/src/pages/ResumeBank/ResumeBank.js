@@ -36,14 +36,14 @@ const ResumeBank = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        console.log(data[2].skills[0].name);
         setCandidates(data);
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
+ 
   const getResumesByTag = (tag, filterName) => {
     fetch(`http://127.0.0.1:8000/users/applicants/?${filterName}=${tag}`, {
       method: "GET",
@@ -55,7 +55,7 @@ const ResumeBank = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setCandidates(data);
       })
       .catch((err) => {
@@ -77,7 +77,7 @@ const ResumeBank = () => {
       <DashboardNav navTitle="Resume Bank" />
       <div className="d-flex justify-content-between content">
         <SearchBar getResumesByTag={getResumesByTag} />
-        <div className=" card-holder m-3">
+            <div className=" card-holder m-3">
           <div className="pagination d-flex align-content-center">
             <h3>Explore Candidates </h3>
             {candidates.length !== 0 ? (

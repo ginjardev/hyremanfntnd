@@ -22,7 +22,9 @@ const CandiateCard = ({ candidate }) => {
           </p>
           <p><span className='fw-bold'>Experience:</span> {candidate.experience_level}</p>
           <p><span className='fw-bold text-wrap'>Skills: </span> 
-                {candidate.skills.map((skill, id) => skill + ', ')}
+                {candidate.skills.map((skill, index) => (
+                    skill.name + ', '
+                ))}
             </p>
         </div>
         {/* <div className='d-flex align-content-center score p-2 rounded ms-3'>

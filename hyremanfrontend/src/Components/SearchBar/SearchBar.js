@@ -2,12 +2,14 @@ import React, {useState} from 'react';
 import TagsInput from '../TagsInput';
 import Tools from '../Tools';
 
-const SearchBar = ({getResumesByTag}) => {
-    const [gender, setGender] = useState();
+const SearchBar = ({getResumesByTag, filterName}) => {
 
+    console.log(filterName);
     const onChange=(e)=>{
-        setGender(e.target.value);
-        console.log(e.target.value);
+        const value = e.target.value;
+        getResumesByTag(value,'gender');
+        console.log(value);
+        
     }
 
 
@@ -22,8 +24,8 @@ const SearchBar = ({getResumesByTag}) => {
                     <label for="location" class="form-label">Gender</label>
                     <select class="form-select" aria-label="Default select example" onChange={onChange}>
                         <option value="">Select Gender</option>
-                        <option value="Female">Female</option>
-                        <option value="Male">Male</option>
+                        <option value="F">Female</option>
+                        <option value="M" >Male</option>
                     </select>
                 </div>
                 <div className='p-3 border-bottom'>
