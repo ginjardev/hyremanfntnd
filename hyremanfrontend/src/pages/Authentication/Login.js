@@ -4,7 +4,6 @@ import Logo from "../../assets/logo/HyremanAsset.svg";
 import "./Login.css";
 import { NavLink, useNavigate } from "react-router-dom";
 
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,7 +27,6 @@ const Login = () => {
       .then((data) => {
         localStorage.setItem('token', data.token);
         if(data.user.is_recruiter === true){
-
           navigate("/dashboard");
         }
         setEmail("");
