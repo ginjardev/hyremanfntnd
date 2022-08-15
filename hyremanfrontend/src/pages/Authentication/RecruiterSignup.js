@@ -17,7 +17,7 @@ const RecruiterSignup = () => {
     e.preventDefault();
 
     // send data to backend
-    fetch("http://localhost:8000/users/create/", {
+    fetch("https://hyremanbackend.herokuapp.com/users/create/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
