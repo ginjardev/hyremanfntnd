@@ -11,7 +11,7 @@ const sidebar_menu = [
     {
         id: 1,
         icon: DashboardIcon,
-        path: '/dashboard',
+        path: '/dashboard-access',
         title: 'Dashboard',
     },
     {

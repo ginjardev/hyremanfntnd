@@ -33,7 +33,7 @@ function App() {
           path="/candidates-details"
           element={<CandidatesEntry child={<CandidateOverview />} />}
         />
-        <Route path="/dashboard" element={<DashboardEntry />} />
+        <Route path="/dashboard-access" element={<DashboardEntry />} />
         <Route path="/jobs" element={<JobsEntry />} />
         <Route path="/profile" element={<ProfileEntry />} />
         <Route path="/setting" element={<SettingsEntry />} />
