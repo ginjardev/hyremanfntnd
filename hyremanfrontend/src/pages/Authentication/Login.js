@@ -55,8 +55,8 @@ const Login = () => {
                 onSubmit={handleSubmit}
               >
                 <div className="text-center">
-                  <p className="fs-4">Create Account</p>
-                  <p>Get started by creating a candidate’s account</p>
+                  <p className="fs-4">Login Account</p>
+                  <p>Input your details to gain access</p>
                 </div>
                 <div className="row">
                   <div className="">
