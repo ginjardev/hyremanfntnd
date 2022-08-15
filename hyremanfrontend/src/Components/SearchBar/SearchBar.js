@@ -8,6 +8,7 @@ const SearchBar = ({getResumesByTag, filterName}) => {
     const onChange=(e)=>{
         const value = e.target.value;
         getResumesByTag(value,'gender');
+        getResumesByTag(value,'experience_level');
         console.log(value);
         
     }
@@ -45,8 +46,13 @@ const SearchBar = ({getResumesByTag, filterName}) => {
                     <TagsInput filterName={"skill"} getResumesByTag={getResumesByTag}/>
                 </div>
                 <div className='p-3 border-bottom'>
-                    <label for="location" class="form-label">Experience</label>
-                    <Tools/>
+                    <label for="location" class="form-label">Experience Level</label>
+                    <select class="form-select" aria-label="Default select example" onChange={onChange}>
+                        <option value="">Select Experience Level</option>
+                        <option value="Entry Level">Entry Level</option>
+                        <option value="Mid Level">Mid Level</option>
+                        <option value="Senior Level">Senior Level</option>
+            </select>
                 </div>
             </div>
         </div>
