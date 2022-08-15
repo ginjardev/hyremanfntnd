@@ -45,14 +45,14 @@ const Home = () => {
           </nav>
 
           <div className="d-flex justify-content-center text-center mt-5">
-            <div className="w-50">
+            <div className="w-75">
               <h1 className="fw-bold text-white" style={{fontSize:"90px" }}>
                 <span style={{ color: "#D2D620" }}>Exposing</span> job seekers
                 to
                 <br />
                 better opportunities
               </h1>
-              <p className="text-white py-1" style={{fontSize:"22px" }}>
+              <p className="text-white py-1" style={{fontSize:"22px", color: "grey" }}>
                 Searching for candidates can be stressful. Let’s help <br />
                 make it stress-free
               </p>
