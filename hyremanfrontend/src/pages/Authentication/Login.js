@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("http://localhost:8000/users/token/", {
+    fetch("https://hyremanbackend.herokuapp.com/users/token/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
