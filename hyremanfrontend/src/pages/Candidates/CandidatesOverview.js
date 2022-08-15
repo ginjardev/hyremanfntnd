@@ -1,10 +1,10 @@
 import React from 'react';
-import DashboardNav from '../../components/DashboardHeader/DashbooardNav';
+import DashboardNav from '../../Components/DashboardHeader/DashbooardNav';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Button from '../../components/Button';
+import Button from '../../Components/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Add from '../../assets/icons/Add';
 import Account from '../../assets/icons/account-circle-filled.svg';

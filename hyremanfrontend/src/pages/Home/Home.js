@@ -1,8 +1,8 @@
 import React from "react";
 import HomeImage from "../../assets/images/HyremanLandingPageImage.svg";
 import "./Home.css";
-import RoundedButton from "../../components/Buttons/RoundedButton";
-import TransparentButton from "../../components/Buttons/TransparentButton";
+import RoundedButton from "../../Components/Buttons/RoundedButton";
+import TransparentButton from "../../Components/Buttons/TransparentButton";
 import RightArrow from "../../assets/icons/chevron-right.svg";
 import Logo from "../../assets/logo/HyremanLogo.svg";
 import { NavLink } from "react-router-dom";

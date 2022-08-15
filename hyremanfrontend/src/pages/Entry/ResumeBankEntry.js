@@ -1,6 +1,6 @@
 import React from "react";
 import ResumeBank from "../ResumeBank/ResumeBank";
-import SideBar from "../../components/Sidebar/Sidebar";
+import SideBar from "../../Components/Sidebar/Sidebar";
 import sidebar_menu from "../../constants/sidebar-menu";
 import "../../App.css";
 

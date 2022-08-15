@@ -1,6 +1,6 @@
 import React from "react";
 import sidebar_menu from "../../constants/sidebar-menu";
-import SideBar from "../../components/Sidebar/Sidebar";
+import SideBar from "../../Components/Sidebar/Sidebar";
 import Dashboard from "../Dashboard/Dasboard";
 
 const DashboardEntry = () => {

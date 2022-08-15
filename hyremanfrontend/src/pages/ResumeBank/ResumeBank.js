@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import DashboardNav from "../../components/DashboardHeader/DashbooardNav";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import DashboardNav from "../../Components/DashboardHeader/DashbooardNav";
+import SearchBar from "../../Components/SearchBar/SearchBar";
 import "../styles.css";
 
-import CandiateCard from "../../components/CandidateCard/CandiateCard";
+import CandiateCard from "../../Components/CandidateCard/CandiateCard";
 // import CandidatesList from "../../constants/candidatesList";
 import { calculateRange, sliceData } from "../../utils/table-pagination";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import SideBar from "../../components/Sidebar/Sidebar";
+import SideBar from "../../Components/Sidebar/Sidebar";
 import sidebar_menu from "../../constants/sidebar-menu";
 const ProfileEntry = () => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import DashboardNav from '../../components/DashboardHeader/DashbooardNav';
+import DashboardNav from '../../Components/DashboardHeader/DashbooardNav';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import { calculateRange, sliceData } from '../../utils/table-pagination';
@@ -19,7 +19,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Button from '../../components/Button';
+import Button from '../../Components/Button';
 import { useNavigate } from 'react-router-dom';
 
 const outerTheme = createTheme({
