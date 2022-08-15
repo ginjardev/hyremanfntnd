@@ -8,8 +8,8 @@ const Dashboard = () => {
 
       <div class="box-container">
         <div class="row box-container">
-          <div class="col-3 filter">Welcome, dear user!</div>
-          <div class="col-8 result">What's your play for today?</div>
+          <div class="col-3 filter shadow">Welcome, dear user!</div>
+          <div class="col-8 result shadow">What's your play for today?</div>
         </div>
       </div>
     </div>
