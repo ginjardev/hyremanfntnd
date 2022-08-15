@@ -29,6 +29,9 @@ const Login = () => {
         if(data.user.is_recruiter === true){
           navigate("/dashboard-access");
         }
+        else{ 
+          navigate("https://forms.gle/BxJeweXXKUuAjaHR8");
+        }
         setEmail("");
         setPassword("");
       })
