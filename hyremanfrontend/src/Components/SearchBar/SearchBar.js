@@ -8,7 +8,6 @@ const SearchBar = ({getResumesByTag, filterName}) => {
     const onChange=(e)=>{
         const value = e.target.value;
         getResumesByTag(value,'gender');
-        getResumesByTag(value,'experience_level');
         console.log(value);
         
     }

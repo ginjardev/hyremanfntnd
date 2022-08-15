@@ -19,9 +19,7 @@ const ResumeBank = () => {
 
   useEffect(() => {
     getResumes();
-    
     setCandidates(sliceData(candidates, page, 4)); 
-    
     setPagination(calculateRange(candidates, 4));
   }, []);
 

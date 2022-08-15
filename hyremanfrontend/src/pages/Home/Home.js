@@ -23,8 +23,8 @@ const Home = () => {
             <div className="d-flex align-content-center justify-content-around p-5 navLeft">
               <img src={Logo} alt="hyreman Logo" width="35%" />
               <div className=" d-flex align-content-center justify-content-around">
-                <TransparentButton title="Why Hyreman" />
-                <TransparentButton title="Blog" />
+                {/* <TransparentButton title="Why Hyreman" />
+                <TransparentButton title="Blog" /> */}
               </div>
             </div>
             <div className="d-flex align-content-center justify-content-around p-5 navRight">
