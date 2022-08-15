@@ -12,7 +12,7 @@ const Home = () => {
     backgroundImage: `url(${HomeImage})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    opacity: 0.8,
+    // opacity: 0.8,
   };
 
   return (
