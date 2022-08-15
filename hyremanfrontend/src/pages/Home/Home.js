@@ -1,5 +1,5 @@
 import React from "react";
-import HomeImage from "../../assets/images/HyremanLandingPageImage.svg";
+import HomeImage from "../../assets/images/HyremanBackgroundImage.svg";
 import "./Home.css";
 import RoundedButton from "../../Components/Buttons/RoundedButton";
 import TransparentButton from "../../Components/Buttons/TransparentButton";
@@ -11,12 +11,12 @@ const Home = () => {
   let imageStyle = {
     backgroundImage: `url(${HomeImage})`,
     backgroundRepeat: "no-repeat",
-    backgroundSize: "contain",
+    backgroundSize: "cover",
   };
 
   return (
     <div className="position-relative" style={imageStyle}>
-      <div className="landing-image" style={{ height: "100vh" }}>
+      <div className="landing-image" style={{ height: "100vh", width:"100%"}}>
         <div>
           <nav className="d-flex align-content-center justify-content-between w-100">
             <div className="d-flex align-content-center justify-content-around p-5 navLeft">
@@ -46,13 +46,13 @@ const Home = () => {
 
           <div className="d-flex justify-content-center text-center mt-5">
             <div className="w-50">
-              <h1 className="fw-bolder text-white">
+              <h1 className="fw-bold text-white" style={{fontSize:"90px" }}>
                 <span style={{ color: "#D2D620" }}>Exposing</span> job seekers
                 to
                 <br />
                 better opportunities
               </h1>
-              <p className="text-white py-1">
+              <p className="text-white py-1" style={{fontSize:"22px" }}>
                 Searching for candidates can be stressful. Let’s help <br />
                 make it stress-free
               </p>
