@@ -3,6 +3,7 @@ import DashboardNav from '../../Components/DashboardHeader/DashbooardNav';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import { calculateRange, sliceData } from '../../utils/table-pagination';
+import { useSelector, useDispatch } from 'react-redux';
 
 import '../styles.css';
 import DoneIcon from '../../assets/icons/done.svg';
@@ -160,16 +161,17 @@ const all_orders = [
 ];
 
 function Candidates() {
+  const { shortlistedCandidates } = useSelector((state) => state.candidates);
   const navigate = useNavigate();
   const [search, setSearch] = useState('');
-  const [orders, setOrders] = useState(all_orders);
+  const [orders, setOrders] = useState(shortlistedCandidates);
   const [page, setPage] = useState(1);
   const [pagination, setPagination] = useState([]);
   const [tab, setTab] = useState('one');
 
   useEffect(() => {
-    setPagination(calculateRange(all_orders, 5));
-    setOrders(sliceData(all_orders, page, 5));
+    setPagination(calculateRange(shortlistedCandidates, 5));
+    setOrders(sliceData(shortlistedCandidates, page, 5));
   }, []);
 
   // Search
@@ -224,7 +226,7 @@ function Candidates() {
   // Change Page
   const __handleChangePage = (new_page) => {
     setPage(new_page);
-    setOrders(sliceData(all_orders, new_page, 5));
+    setOrders(sliceData(shortlistedCandidates, new_page, 5));
   };
 
   return (
@@ -301,14 +303,13 @@ function Candidates() {
 
               {orders.length !== 0 ? (
                 <tbody>
-                  {orders.map((order, index) => {
-                    console.log(order);
+                  {orders.map((candidate, index) => {
                     return (
                       <tr
                         className="bg-light hover"
                         key={index}
                         onClick={() => {
-                          navigate('/candidates-details');
+                          navigate('/candidates-details', { state: candidate });
                         }}
                       >
                         <td>
@@ -316,38 +317,42 @@ function Candidates() {
                           &nbsp;
                         </td>
                         <td>
-                          <span>{order.fullname}</span>
+                          <span>
+                            {candidate.user.first_name}{' '}
+                            {candidate.user.last_name}
+                          </span>
                         </td>
                         <td>
-                          <span>{order.email}</span>
+                          <span>{candidate.user.email}</span>
                         </td>
                         <td>
                           <div>
-                            <span>{order.phone}</span>
+                            <span>{candidate.phone}</span>
                           </div>
                         </td>
                         <td>
                           <div>
                             <span
-                              className={
-                                parseInt(order.skillsMatch.replace('%', '')) >
-                                50
-                                  ? 'text-pass'
-                                  : 'text-fail'
-                              }
+                              className="text-pass"
+                              // className={
+                              //   parseInt(candidate.skillsMatch.replace('%', '')) >
+                              //   50
+                              //     ? 'text-pass'
+                              //     : 'text-fail'
+                              // }
                             >
-                              {order.skillsMatch}
+                              98%
                             </span>
                           </div>
                         </td>
                         <td>
-                          <span>{order.testScore}</span>
+                          <span>{100}</span>
                         </td>
                         <td>
-                          <span>{order.owner}</span>
+                          <span>{'Admin'}</span>
                         </td>
                         <td>
-                          <span>{order.stage}</span>
+                          <span>{'Schedule Interview'}</span>
                         </td>
                         <td className="hover">
                           <More />
@@ -359,7 +364,7 @@ function Candidates() {
               ) : null}
             </table>
 
-            {orders.length !== 0 ? (
+            {shortlistedCandidates.length !== 0 ? (
               <div className="dashboard-content-footer bg-light">
                 {pagination.map((item, index) => (
                   <span
