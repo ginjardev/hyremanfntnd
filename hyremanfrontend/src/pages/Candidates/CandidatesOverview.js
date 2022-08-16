@@ -13,10 +13,13 @@ import Twitter from '../../assets/icons/twitter';
 import LinkedIn from '../../assets/icons/linkedin';
 import Edit from '../../assets/icons/edit';
 import ChevronDown from '../../assets/icons/chevron-sort-down';
+import { useLocation } from 'react-router-dom';
 
 import '../styles.css';
 
 function Candidates() {
+  const { state: candidate } = useLocation();
+  console.log({ candidate });
   const outerTheme = createTheme({
     palette: {
       primary: {
@@ -67,9 +70,9 @@ function Candidates() {
               <img src={Account} alt="Account" />
               <div className="flex-col mt-2 ms-3">
                 <span className="text-black text-bold mb-2">
-                  Regina Boatema
+                  {candidate.user.first_name} {candidate.user.last_name}
                 </span>
-                <span className="text-gray">Accra</span>
+                <span className="text-gray">{candidate.region}</span>
               </div>
               <div className="flex-row h-5 ms-5 mt-3 flex-3">
                 <div className="p-2 border d-flex justify-content-center align-items-center rounded-circle mx-1 hover">
@@ -95,13 +98,15 @@ function Candidates() {
                 <span className="py-1">Stage</span>
               </div>
               <div className="flex-col flex-3 fw-normal font-small">
-                <span className="py-1">caroline.kpogo@gmail.com</span>
-                <span className="py-1">Female</span>
-                <span className="py-1">02091515362</span>
-                <span className="py-1">Ghana</span>
+                <span className="py-1">{candidate.user.email}</span>
+                <span className="py-1">
+                  {candidate.gender === 'M' ? 'Male' : 'Female'}
+                </span>
+                <span className="py-1">{candidate.phone}</span>
+                <span className="py-1">{candidate.country}</span>
                 <div className="flex-row ">
                   <span className="py-1 me-2">Interview</span>
-                  <div>
+                  <div className="hover">
                     <ChevronDown />
                   </div>
                 </div>

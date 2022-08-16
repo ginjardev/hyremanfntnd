@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './styles.css';
 
 const SideBarItem = ({ item, active }) => {
-    console.log(item);
     const [hover, setHover] = useState(false);
     return (
         <Link 
