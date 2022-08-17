@@ -10,8 +10,6 @@ const CandiateCard = ({ candidate }) => {
   const { allCandidates: candidates } = useSelector(
     (state) => state.candidates
   );
-
-
   return (
     <div className="card d-flex align-items-center rounded my-3">
       <div className="card-top d-flex align-items-start mt-2">
