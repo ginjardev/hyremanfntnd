@@ -9,23 +9,25 @@ const SearchBar = ({ getResumesByTag, filterName }) => {
 
     let url = 'https://hyremanbackend.herokuapp.com/users/skills/'
 
-    // fetch(url, {
-    //     method: 'GET',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //         Accept: 'application/json',
-    //         Authorization: 'Token ' + localStorage.getItem('token'),
-    //     },
-    // })
-    //     .then((res) => res.json())
-    //     .then((data) => {
-    //         SetSkills(data);
+    useEffect(() => {
+      fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+            Authorization: 'Token ' + localStorage.getItem('token'),
+        },
+    })
+        .then((res) => res.json())
+        .then((data) => {
+            SetSkills(data);
            
-    //         // console.log(data);
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     }
-    // );
+            // console.log(data);
+        }).catch((err) => {
+            console.log(err);
+        }
+    );
+    }, []);
     
 
   const onChangeGender = (e) => {
@@ -135,14 +137,14 @@ const SearchBar = ({ getResumesByTag, filterName }) => {
             onChange={onChangeSkill}
           >
               <option value="">Select Skills</option>
-              <option value="UX Research">UX Research</option>
-            {/* {
+              {/* <option value="UX Research">UX Research</option> */}
+            {
                 skills.map((skill) => {
                     return (
-                        <option value={skill.name}>{skill.name}</option>
+                        <option value={skill.id}>{skill.name}</option>
                     )
                 }       
-            )} */}
+            )}
           </select>
         </div>
         {/* <div className='p-3 border-bottom'>

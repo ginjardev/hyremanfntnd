@@ -12,17 +12,17 @@ const DashboardNav = ({ navTitle }) => {
         <h3 className="nav-title px-4">{navTitle}</h3>
         <div className="d-flex justify-content-around align-items-center px-2 dash">
           <div className="">
-            <Button
+            {/* <Button
               icon={<img src={Add} alt="add icon" />}
               title="Add"
               className="btn btn-sm pe-3"
-            />
+            /> */}
           </div>
-          <div className="circle">
+          {/* <div className="circle">
             <img src={Bell} alt="notification bell" />
-          </div>
+          </div> */}
           <div className="">
-            <img src={AccountCircle} alt="notification bell" />
+            {/* <img src={AccountCircle} alt="notification bell" /> */}
           </div>
         </div>
       </nav>
