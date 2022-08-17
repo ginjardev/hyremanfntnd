@@ -1,11 +1,42 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TagsInput from '../TagsInput';
 import Tools from '../Tools';
 
 const SearchBar = ({ getResumesByTag, filterName }) => {
+
+
+    const [skills, SetSkills] = useState([]);
+
+    let url = 'http://127.0.0.1:8000/users/skills/'
+
+    // fetch(url, {
+    //     method: 'GET',
+    //     headers: {
+    //         'Content-Type': 'application/json',
+    //         Accept: 'application/json',
+    //         Authorization: 'Token ' + localStorage.getItem('token'),
+    //     },
+    // })
+    //     .then((res) => res.json())
+    //     .then((data) => {
+    //         SetSkills(data);
+           
+    //         // console.log(data);
+    //     }).catch((err) => {
+    //         console.log(err);
+    //     }
+    // );
+    
+
   const onChangeGender = (e) => {
     const value = e.target.value;
     getResumesByTag(value, 'gender');
+  };
+
+  const onChangeSkill = (e) => {
+    const value = e.target.value;
+    console.log(value);
+    getResumesByTag(value, 'skills');
   };
 
   const onChangeExperience = (e) => {
@@ -30,7 +61,7 @@ const SearchBar = ({ getResumesByTag, filterName }) => {
 
   return (
     <div className="search-bar-container">
-      <div className="col-3 bg-info align-items-center m-2 search-bar">
+      <div className="col-3 bg-tint align-items-center m-2 search-bar">
         <div className="p-3 border-bottom">
           <label for="education" class="form-label">
             Education
@@ -42,12 +73,9 @@ const SearchBar = ({ getResumesByTag, filterName }) => {
           >
             <option value="">Select Education</option>
             <option value="SSCE">SSCE</option>
-            <option value="Bachelor of Arts">Bachelor of Arts</option>
-            <option value="Bachelor of Science">Bachelor of Science</option>
-            <option value="Master of Science">Master of Science</option>
-            <option value="Master of Business Administration">
-              Master of Business Administration
-            </option>
+            <option value="Diploma">Diploma</option>
+            <option value="Undergraduate Degree">Undergraduate Degree</option>
+            <option value="Postgraduate Degree">Post Graduate Degree</option>
           </select>
         </div>
         <div className="p-3 border-bottom">
@@ -93,6 +121,28 @@ const SearchBar = ({ getResumesByTag, filterName }) => {
             <option value="">Select Country</option>
             <option value="Ghana">Ghana</option>
             <option value="Nigeria">Nigeria</option>
+          </select>
+        </div>
+        <div className="p-3 border-bottom">
+
+
+          <label for="country" class="form-label">
+            Skills
+          </label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onChange={onChangeSkill}
+          >
+              <option value="">Select Skills</option>
+              <option value="UX Research">UX Research</option>
+            {/* {
+                skills.map((skill) => {
+                    return (
+                        <option value={skill.name}>{skill.name}</option>
+                    )
+                }       
+            )} */}
           </select>
         </div>
         {/* <div className='p-3 border-bottom'>

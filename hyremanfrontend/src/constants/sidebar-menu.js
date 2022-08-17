@@ -20,12 +20,7 @@ const sidebar_menu = [
     //     path: '#',
     //     title: 'Jobs',
     // },
-    {
-        id: 3,
-        icon: CandidatesIcon,
-        path: '/candidates',
-        title: 'Candidates',
-    },
+    
     // {
     //     id: 4,
     //     icon: TestLibraryIcon,
@@ -37,6 +32,12 @@ const sidebar_menu = [
         icon: ResumeBankIcon,
         path: '/resume-bank',
         title: 'Resume Bank',
+    },
+    {
+        id: 3,
+        icon: CandidatesIcon,
+        path: '/candidates',
+        title: 'Candidates',
     },
     // {
     //     id: 6,

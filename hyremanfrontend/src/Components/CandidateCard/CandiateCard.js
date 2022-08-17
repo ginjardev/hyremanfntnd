@@ -3,12 +3,15 @@ import './CardidateCard.css';
 import ImageIcon from '../../assets/icons/account-circle-filled.svg';
 import { addToShortlistedCandidates } from '../../redux/slices/candidates';
 import { useSelector, useDispatch } from 'react-redux';
+import { Document, Page,pdfjs } from 'react-pdf';
 
 const CandiateCard = ({ candidate }) => {
   const dispatch = useDispatch();
   const { allCandidates: candidates } = useSelector(
     (state) => state.candidates
   );
+
+
   return (
     <div className="card d-flex align-items-center rounded my-3">
       <div className="card-top d-flex align-items-start mt-2">
@@ -45,7 +48,9 @@ const CandiateCard = ({ candidate }) => {
         <a
           className="text-primary p-1"
           style={{ textDecoration: 'none' }}
-          href={candidate.resume}
+          href={
+            candidate.resume
+          }
           target="_blank"
           rel="noreferrer"
         >
