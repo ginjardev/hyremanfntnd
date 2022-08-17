@@ -7,7 +7,7 @@ const SearchBar = ({ getResumesByTag, filterName }) => {
 
     const [skills, SetSkills] = useState([]);
 
-    let url = 'http://127.0.0.1:8000/users/skills/'
+    let url = 'https://hyremanbackend.herokuapp.com/users/skills/'
 
     // fetch(url, {
     //     method: 'GET',

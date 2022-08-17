@@ -26,7 +26,7 @@ const ResumeBank = () => {
   }, []);
 
   const getResumes = () => {
-    fetch('http://127.0.0.1:8000/users/applicants/', {
+    fetch('https://hyremanbackend.herokuapp.com/users/applicants/', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -45,7 +45,7 @@ const ResumeBank = () => {
 
   const getResumesByTag = (tag, filterName) => {
     fetch(
-      `http://127.0.0.1:8000/users/applicants/?${filterName}=${tag}`,
+      `https://hyremanbackend.herokuapp.com/users/applicants/?${filterName}=${tag}`,
       {
         method: 'GET',
         headers: {
