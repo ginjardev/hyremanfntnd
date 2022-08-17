@@ -98,7 +98,7 @@ const ResumeBank = () => {
               </div>
             ) : (
               <div className="dashboard-content-footer">
-                <span className="empty-table">No data</span>
+                <span className="empty-table"></span>
               </div>
             )}
           </div>
