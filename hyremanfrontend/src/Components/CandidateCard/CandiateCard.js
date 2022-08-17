@@ -3,7 +3,7 @@ import './CardidateCard.css';
 import ImageIcon from '../../assets/icons/account-circle-filled.svg';
 import { addToShortlistedCandidates } from '../../redux/slices/candidates';
 import { useSelector, useDispatch } from 'react-redux';
-import { Document, Page,pdfjs } from 'react-pdf';
+// import { Document, Page,pdfjs } from 'react-pdf';
 
 const CandiateCard = ({ candidate }) => {
   const dispatch = useDispatch();
