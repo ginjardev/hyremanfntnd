@@ -3,32 +3,29 @@ import TagsInput from '../TagsInput';
 import Tools from '../Tools';
 
 const SearchBar = ({ getResumesByTag, filterName }) => {
+  const [skills, SetSkills] = useState([]);
 
+  let url = 'https://hyremanbackend.herokuapp.com/users/skills/';
 
-    const [skills, SetSkills] = useState([]);
-
-    let url = 'https://hyremanbackend.herokuapp.com/users/skills/'
-
-    useEffect(() => {
-      fetch(url, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            Accept: 'application/json',
-            Authorization: 'Token ' + localStorage.getItem('token'),
-        },
+  useEffect(() => {
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        Authorization: 'Token ' + localStorage.getItem('token'),
+      },
     })
-        .then((res) => res.json())
-        .then((data) => {
-            SetSkills(data);
-           
-            // console.log(data);
-        }).catch((err) => {
-            console.log(err);
-        }
-    );
-    }, []);
-    
+      .then((res) => res.json())
+      .then((data) => {
+        SetSkills(data);
+
+        // console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   const onChangeGender = (e) => {
     const value = e.target.value;
@@ -64,6 +61,22 @@ const SearchBar = ({ getResumesByTag, filterName }) => {
   return (
     <div className="search-bar-container">
       <div className="col-3 bg-tint align-items-center m-2 search-bar">
+        <div className="p-3 border-bottom">
+          <label for="country" class="form-label">
+            Job Role
+          </label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            onChange={onChangeSkill}
+          >
+            <option value="">Select Job Role</option>
+            {/* <option value="UX Research">UX Research</option> */}
+            {skills.map((skill) => {
+              return <option value={skill.id}>{skill.name}</option>;
+            })}
+          </select>
+        </div>
         <div className="p-3 border-bottom">
           <label for="education" class="form-label">
             Education
@@ -125,28 +138,7 @@ const SearchBar = ({ getResumesByTag, filterName }) => {
             <option value="Nigeria">Nigeria</option>
           </select>
         </div>
-        <div className="p-3 border-bottom">
 
-
-          <label for="country" class="form-label">
-            Skills
-          </label>
-          <select
-            class="form-select"
-            aria-label="Default select example"
-            onChange={onChangeSkill}
-          >
-              <option value="">Select Skills</option>
-              {/* <option value="UX Research">UX Research</option> */}
-            {
-                skills.map((skill) => {
-                    return (
-                        <option value={skill.id}>{skill.name}</option>
-                    )
-                }       
-            )}
-          </select>
-        </div>
         {/* <div className='p-3 border-bottom'>
                     <label for="location" class="form-label">Tools</label>
                     <Tools/>
