@@ -233,7 +233,7 @@ function Candidates() {
     <div className="dashboard-content">
       <DashboardNav navTitle="Resume Bank" />
       <div>
-        <div className="flex-row m-3 w-full justify-content-between px-5">
+        {/* <div className="flex-row m-3 w-full justify-content-between px-5">
           <div className="flex-row">
             <div className="flex-row back-button hover">
               <BackButton />
@@ -271,7 +271,7 @@ function Candidates() {
             title="Submit Candidate"
             className="btn btn-sm pe-3"
           />
-        </div>
+        </div> */}
         <Box className="ms-5" sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <ThemeProvider theme={outerTheme}>
             <Tabs value={value} onChange={handleChange} textColor="primary">

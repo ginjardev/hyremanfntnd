@@ -120,7 +120,7 @@ function Candidates() {
                 <span className="py-1">Expected Salary</span>
               </div>
               <div className="flex-col flex-1 fw-normal font-small">
-                <span className="py-1">2</span>
+                <span className="py-1">4</span>
                 <span className="py-1 hover text-extrabold">View</span>
                 <span className="py-1 hover text-extrabold">View</span>
                 <span className="py-1">2000</span>
@@ -132,19 +132,19 @@ function Candidates() {
               <div className="flex-8">
                 <div className="flex-row my-1">
                   <span className="text-black mx-4">
-                    Senior Mobile Engineer at Hubtel Ghana Limited
+                    Web Developer at Hubtel Ghana Limited
                   </span>
                   <span className="text-gray">2019 - 2021</span>
                 </div>
                 <div className="flex-row my-1">
                   <span className="text-black mx-4">
-                    Mobile Developer at MEST Africa
+                    Web Developer at Teksol
                   </span>
                   <span className="text-gray">2018 - 2019</span>
                 </div>
                 <div className="flex-row my-1">
                   <span className="text-black mx-4">
-                    Mobile Engineer at MEST Africa
+                    Mobile Engineer at BillsCom Consult
                   </span>
                   <span className="text-gray">2016 - 2018</span>
                 </div>
@@ -172,14 +172,14 @@ function Candidates() {
               <span className="text-gray flex-1">Skills</span>
               <div className="flex-8">
                 <div className="flex-row my-1">
-                  <span className="text-black mx-4">Angular</span>
+                  <span className="text-black mx-4">React, Frontend Development, Git, JavaScript</span>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex-1 border mb-4 ms-4 me-4 shadow-sm p-4">
+          {/* <div className="flex-1 border mb-4 ms-4 me-4 shadow-sm p-4">
             <span className="fw-bold">Assessment</span>
-          </div>
+          </div> */}
         </div>
         <div className="flex-1 border mb-4 me-4 mt-4 shadow-sm">
           {' '}
