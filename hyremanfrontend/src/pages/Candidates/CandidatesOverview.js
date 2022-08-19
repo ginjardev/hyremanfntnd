@@ -198,14 +198,14 @@ function Candidates() {
             Item One
           </TabPanel>
           <TabPanel value={value} index={1}>
-            {/* <div className="flex-row justify-content-center">
+            <div className="flex-row justify-content-center">
               <div className="d-inline-flex justify-content-center align-items-center px-5 py-2 border rounded-5 hover">
                 <div className=" p-1 rounded-circle border-blue me-4">
                   <Add fill={'#0964D8'} />
                 </div>
                 <span>Add appointment</span>
               </div>
-            </div> */}
+            </div>
             <CalendarEvent/>
           </TabPanel>
           <TabPanel value={value} index={2}>
