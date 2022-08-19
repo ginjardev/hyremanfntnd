@@ -70,7 +70,7 @@ function Candidates() {
         <div className="flex-col flex-2">
           <div className="flex-2 border p-4 m-4 shadow-sm">
             <div className="flex-row ">
-              <img src={candidate.gender === 'M' ? MaleDefault : FemaleDefault} alt="Account" />
+              <img src={Account} alt="Account" />
               <div className="flex-col mt-2 ms-3">
                 <span className="text-black text-bold mb-2">
                   {candidate.user.first_name} {candidate.user.last_name}
