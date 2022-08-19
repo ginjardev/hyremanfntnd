@@ -1,7 +1,5 @@
 import React from 'react';
 import { InlineWidget } from "react-calendly";
-import { PopupWidget } from "react-calendly";
-import { PopupButton } from "react-calendly";
 
 const CalendarEvent = () => {
     return (
