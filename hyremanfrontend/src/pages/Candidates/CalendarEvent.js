@@ -1,10 +1,10 @@
 import React from 'react';
-import { InlineWidget } from "react-calendly";
+// import { InlineWidget } from "react-calendly";
 
 const CalendarEvent = () => {
     return (
         <div>
-            <InlineWidget url='https://calendly.com/ask-hyreman/interview-schedule'/>
+            {/* <InlineWidget url='https://calendly.com/ask-hyreman/interview-schedule'/> */}
         </div>
     );
 };
