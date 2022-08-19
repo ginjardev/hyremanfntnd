@@ -4,6 +4,7 @@ import Tools from '../Tools';
 
 const SearchBar = ({ getResumesByTag, filterName }) => {
   const [skills, SetSkills] = useState([]);
+  const [filters, setFilters] = useState([])
 
   let url = 'https://hyremanbackend.herokuapp.com/users/skills/';
 
@@ -27,39 +28,71 @@ const SearchBar = ({ getResumesByTag, filterName }) => {
       });
   }, []);
 
+  useEffect(() => {
+    getResumesByTag(filters)
+  
+  }, [filters])
+  
+
   const onChangeGender = (e) => {
     const value = e.target.value;
-    getResumesByTag(value, 'gender');
+    setFilters((prevState) => {
+      return [...prevState, {
+        'gender': value }];
+    });
+    
+    // getResumesByTag(value, 'gender');
   };
 
   const onChangeSkill = (e) => {
     const value = e.target.value;
     console.log(value);
-    getResumesByTag(value, 'skills');
+    setFilters((prevState) => {
+      return [...prevState, {
+        'skills': value }];
+    });
+    // getResumesByTag(value, 'skills');
   };
 
   const onChangeExperience = (e) => {
     const value = e.target.value;
-    getResumesByTag(value, 'experience_level');
+    setFilters((prevState) => {
+      return [...prevState, {
+        'experience_level': value }];
+    });
+    // getResumesByTag(value, 'experience_level');
   };
 
   const onChangeEducation = (e) => {
     const value = e.target.value;
-    getResumesByTag(value, 'education');
+    setFilters((prevState) => {
+      return [...prevState, {
+        'education': value }];
+    });
+
+    // getResumesByTag(value, 'education');
   };
 
   const onChangeCountry = (e) => {
     const value = e.target.value;
-    getResumesByTag(value, 'country');
+    setFilters((prevState) => {
+      return [...prevState, {
+        'country': value }];
+    });
+    // getResumesByTag(value, 'country');
   };
 
   const onChangeRegion = (e) => {
     const value = e.target.value;
-    getResumesByTag(value, 'region');
+    setFilters((prevState) => {
+      return [...prevState, {
+        'region': value }];
+    });
+    // getResumesByTag(value, 'region');
   };
 
   return (
-    <div className="search-bar-container">
+    <div className="search-bar-container w-25">
       <div className="col-3 bg-tint align-items-center m-2 search-bar">
         <div className="p-3 border-bottom">
           <label for="country" class="form-label">

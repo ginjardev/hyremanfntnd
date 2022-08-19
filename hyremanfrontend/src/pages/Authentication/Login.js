@@ -10,7 +10,11 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const [isActive, setIsActive] = useState(true);
+
+
   const handleSubmit = (e) => {
+    setIsActive(!isActive);
     e.preventDefault();
 
     fetch("https://hyremanbackend.herokuapp.com/users/token/", {
@@ -71,6 +75,7 @@ const Login = () => {
                       className="form-control"
                       placeholder="Enter Email"
                       id="inputEmail4"
+                      required
                     />
                   </div>
                 </div>
@@ -90,11 +95,13 @@ const Login = () => {
                       name="password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
+                      required
                     />
                   </div>
                 </div>
                 <div className="m-4 d-flex justify-content-center">
-                  <button class="btn btn-primary px-5" type="submit">
+                  <button class ="btn btn-primary px-5" type="submit">
+                  <span class={isActive ? '' : "spinner-border spinner-border-sm"} role="status" aria-hidden="true"></span>&nbsp;
                     Login
                   </button>
                 </div>

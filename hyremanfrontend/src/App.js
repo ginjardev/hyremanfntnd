@@ -15,6 +15,8 @@ import TestLibraryEntry from './pages/Entry/TestLibraryEntry';
 import CandidateList from './pages/Candidates/Candidates';
 import CandidateOverview from './pages/Candidates/CandidatesOverview';
 import CandidatesList from './constants/candidatesList';
+import CalendarEvent from './pages/Candidates/CalendarEvent';
+
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
         <Route path="/profile" element={<ProfileEntry />} />
         <Route path="/setting" element={<SettingsEntry />} />
         <Route path="/test-library" element={<TestLibraryEntry />} />
+        
       </Routes>
     </Router>
   );

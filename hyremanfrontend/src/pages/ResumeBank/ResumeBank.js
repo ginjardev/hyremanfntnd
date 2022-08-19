@@ -45,8 +45,46 @@ const ResumeBank = () => {
   };
 
   const getResumesByTag = (tag, filterName) => {
+    const urlBase = 'https://hyremanbackend.herokuapp.com/users/applicants/';
+    const q=`${urlBase}?${filterName}=${tag}`
+
+    console.log('q>>>', q)
+
     fetch(
-      `https://hyremanbackend.herokuapp.com/users/applicants/?${filterName}=${tag}`,
+      `https://hyremanbackend.herokuapp.com/users/applicants/?${filterName}=${tag}&${filterName}=${tag}&${filterName}=${tag}&${filterName}=${tag}&${filterName}=${tag}&${filterName}=${tag}`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          Authorization: 'Token ' + token,
+        },
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        dispatch(setCandidates(data));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const getResumesByTagOdafeHack = (filters) => {
+    const urlBase = 'https://hyremanbackend.herokuapp.com/users/applicants/';
+    let q=`${urlBase}?`
+
+    filters.forEach((filter) => {
+      for(var k in filter){
+        console.log('filter', k)
+        q += `&${k}=${filter[k]}`
+      }
+    })
+
+    console.log('q>>>', q)
+
+    fetch(
+      q,
       {
         method: 'GET',
         headers: {
@@ -78,7 +116,8 @@ const ResumeBank = () => {
     <div className="">
       <DashboardNav navTitle="Resume Bank" />
       <div className="d-flex justify-content-between content">
-        <SearchBar getResumesByTag={getResumesByTag} />
+        {/* <SearchBar getResumesByTag={getResumesByTag} /> */}
+        <SearchBar getResumesByTag={getResumesByTagOdafeHack} />
         <div className=" card-holder m-3">
           <div className="pagination d-flex align-content-center">
             <h3>Explore Candidates </h3>

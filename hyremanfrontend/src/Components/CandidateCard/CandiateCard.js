@@ -3,6 +3,11 @@ import './CardidateCard.css';
 import ImageIcon from '../../assets/icons/account-circle-filled.svg';
 import { addToShortlistedCandidates } from '../../redux/slices/candidates';
 import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
+import MaleDefault from '../../assets/images/defaultmale.jpg';
+import FemaleDefault from '../../assets/images/defaultfemale.jpg';
+
+
 // import { Document, Page,pdfjs } from 'react-pdf';
 
 const CandiateCard = ({ candidate }) => {
@@ -10,13 +15,22 @@ const CandiateCard = ({ candidate }) => {
   const { allCandidates: candidates } = useSelector(
     (state) => state.candidates
   );
+  
+  const [isActive, setIsActive] = useState(false);
+
+  const handleSubmit = (e) => {
+    setIsActive(!isActive);
+    dispatch(addToShortlistedCandidates(candidate));
+  }
+
   return (
-    <div className="card d-flex align-items-center rounded my-3">
+    <div className="card d-flex align-items-center rounded my-3 w-75">
       <div className="card-top d-flex align-items-start mt-2">
-        <div className="d-flex justify-content-start ">
-          <img src={candidate.icon ?? ImageIcon} alt="icon" />
+        <div className="d-flex justify-content-start w-25">
+          <img src={candidate.gender === 'M' ? MaleDefault : FemaleDefault}
+           alt="icon" style={{borderRadius: '50%'}} className='img-thumbnail' maxHeight='100%' maxWidth='100%'/>
         </div>
-        <div className="d-flex flex-column px-3">
+        <div className="d-flex flex-column px-3 w-25">
           <p className="fs-4 fw-bold">
             {candidate?.user?.first_name} {candidate?.user?.last_name}
           </p>
@@ -25,7 +39,7 @@ const CandiateCard = ({ candidate }) => {
           </p>
           <p>{candidate.gender === 'M' ? 'Male' : 'Female'}</p>
         </div>
-        <div className="d-flex flex-column p-2 text-wrap me-2">
+        <div className="d-flex flex-column p-2 w-50 text-wrap me-2">
           <p>
             <span className="fw-bold">Education:</span> {candidate.education}
           </p>
@@ -55,12 +69,15 @@ const CandiateCard = ({ candidate }) => {
           View Resume
         </a>
         <button
-          className="btn btn-sm"
-          onClick={() => {
-            dispatch(addToShortlistedCandidates(candidate));
+          className={
+            isActive ? 'btn btn-light px-5 disabled' : 'btn btn-primary px-5'
+          }
+          onClick={(e) => {
+            handleSubmit(e);
           }}
         >
-          Shortlist Candidate
+          {isActive ? 'Candidate Shortlisted' : 'Shortlist Candidate'}
+
         </button>
       </div>
     </div>
