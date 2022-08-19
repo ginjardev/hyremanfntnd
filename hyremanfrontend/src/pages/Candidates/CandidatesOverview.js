@@ -62,6 +62,20 @@ function Candidates() {
   };
 
   const [value, setValue] = React.useState(1);
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [showSuccess, setShowSuccess] = React.useState(false);
+
+  const handleAppointment = (e) => {
+    e.preventDefault();
+    console.log('appointment');
+    setIsLoading(true);
+    const time = setTimeout(() => {
+      setIsLoading(false);
+      setShowSuccess(true);
+    }, 2000);
+
+    time();
+  }
 
   return (
     <div className="dashboard-content">
@@ -199,12 +213,22 @@ function Candidates() {
           </TabPanel>
           <TabPanel value={value} index={1}>
             <div className="flex-row justify-content-center">
-              <div className="d-inline-flex justify-content-center align-items-center px-5 py-2 border rounded-5 hover">
-                <div className=" p-1 rounded-circle border-blue me-4">
-                  <Add fill={'#0964D8'} />
-                </div>
-                <span>Add appointment</span>
-              </div>
+              {!showSuccess ? <form className="flex flex-col " onSubmit={handleAppointment}>
+                <input type="date" className='px-3 pl-3 py-2 my-4 p-1 border rounded-5 ' />
+                <input type="time" className='px-3 pl-3 py-2 mb-4 p-1 border rounded-5 '/>
+                <textarea type="textarea" rows="4" placeholder="Enter message" className='px-3 pl-3 py-2 mb-4 p-1 border rounded-4 '/>
+
+                <button type='submit' style={{width: '220px'}} className="d-inline-flex justify-content-center align-items-center px-5 w-75 py-2 border rounded-5 hover">
+                  {isLoading ? <span>Adding...</span>
+                        : <>
+                        <div className=" p-1 rounded-circle border-blue me-4">
+                          <Add fill={'#0964D8'} />
+                        </div>
+                        <span>Add appointment</span>
+                        </>
+                }
+                </button>
+              </form>: <h3 className='text-success'>Appointment scheduled successfully!</h3>}
             </div>
             <CalendarEvent/>
           </TabPanel>
