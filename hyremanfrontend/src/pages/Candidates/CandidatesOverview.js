@@ -144,7 +144,7 @@ function Candidates() {
                 </div>
                 <div className="flex-row my-1">
                   <span className="text-black mx-4">
-                    Frontend Engineer at BillsCom Consult
+                    Frontend Developer at BillsCom Consult
                   </span>
                   <span className="text-gray">2016 - 2018</span>
                 </div>
